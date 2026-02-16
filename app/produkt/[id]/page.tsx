@@ -6,7 +6,7 @@ import { AddToCartButton } from '@/components/AddToCartButton';
 import { ProductBadges } from '@/components/ProductBadges';
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export async function generateStaticParams() {
@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const product = products.find((p) => p.id === params.id);
+  const { id } = await params;
+  const product = products.find((p) => p.id === id);
   
   if (!product) {
     return {
@@ -35,8 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProductPage({ params }: Props) {
-  const product = products.find((p) => p.id === params.id);
+export default async function ProductPage({ params }: Props) {
+  const { id } = await params;
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
     return (
