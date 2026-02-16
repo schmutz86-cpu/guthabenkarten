@@ -1,0 +1,202 @@
+[
+  {
+    "id": "steam-50",
+    "name": "Steam Guthaben CHF 50",
+    "category": "gaming",
+    "brand": "Steam",
+    "price": 50.00,
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "Steam Guthaben CHF 50 – Sofortige Lieferung per E-Mail. Einlösbar im Steam Store für Spiele, DLCs und mehr.",
+      "fr": "Crédit Steam CHF 50 – Livraison instantanée par e-mail. Utilisable dans le Steam Store pour des jeux, DLC et plus encore.",
+      "it": "Credito Steam CHF 50 – Consegna immediata via e-mail. Riscattabile nello Steam Store per giochi, DLC e altro.",
+      "en": "Steam Credit CHF 50 – Instant delivery via email. Redeemable in the Steam Store for games, DLCs and more."
+    },
+    "image": "/images/products/steam-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "steam", "pc", "beliebt"]
+  },
+  {
+    "id": "playstation-50",
+    "name": "PlayStation Store CHF 50",
+    "category": "gaming",
+    "brand": "PlayStation",
+    "price": 50.00,
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "PlayStation Store Guthaben CHF 50 – Für PS5, PS4 und PS3. Sofortiger Download per E-Mail.",
+      "fr": "Crédit PlayStation Store CHF 50 – Pour PS5, PS4 et PS3. Téléchargement instantané par e-mail.",
+      "it": "Credito PlayStation Store CHF 50 – Per PS5, PS4 e PS3. Download immediato via e-mail.",
+      "en": "PlayStation Store Credit CHF 50 – For PS5, PS4 and PS3. Instant download via email."
+    },
+    "image": "/images/products/playstation-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "playstation", "console", "beliebt"]
+  },
+  {
+    "id": "xbox-50",
+    "name": "Xbox Live CHF 50",
+    "category": "gaming",
+    "brand": "Xbox",
+    "price": 50.00,
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "Xbox Live Guthaben CHF 50 – Für Xbox Series X|S, Xbox One und Windows. Sofortige Lieferung.",
+      "fr": "Crédit Xbox Live CHF 50 – Pour Xbox Series X|S, Xbox One et Windows. Livraison instantanée.",
+      "it": "Credito Xbox Live CHF 50 – Per Xbox Series X|S, Xbox One e Windows. Consegna immediata.",
+      "en": "Xbox Live Credit CHF 50 – For Xbox Series X|S, Xbox One and Windows. Instant delivery."
+    },
+    "image": "/images/products/xbox-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "xbox", "console", "beliebt"]
+  },
+  {
+    "id": "netflix-30",
+    "name": "Netflix Geschenkkarte CHF 30",
+    "category": "streaming",
+    "brand": "Netflix",
+    "price": 30.00,
+    "margin": 0.06,
+    "currency": "CHF",
+    "description": {
+      "de": "Netflix Geschenkkarte CHF 30 – Perfekt zum Verschenken. Einlösbar für Netflix-Abos in der Schweiz.",
+      "fr": "Carte cadeau Netflix CHF 30 – Parfait pour offrir. Utilisable pour les abonnements Netflix en Suisse.",
+      "it": "Carta regalo Netflix CHF 30 – Perfetto per regalare. Riscattabile per abbonamenti Netflix in Svizzera.",
+      "en": "Netflix Gift Card CHF 30 – Perfect for gifting. Redeemable for Netflix subscriptions in Switzerland."
+    },
+    "image": "/images/products/netflix-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["streaming", "netflix", "geschenk"]
+  },
+  {
+    "id": "spotify-30",
+    "name": "Spotify Premium CHF 30",
+    "category": "streaming",
+    "brand": "Spotify",
+    "price": 30.00,
+    "margin": 0.06,
+    "currency": "CHF",
+    "description": {
+      "de": "Spotify Premium Guthaben CHF 30 – 3 Monate werbefreies Musik-Streaming. Sofortige Lieferung.",
+      "fr": "Crédit Spotify Premium CHF 30 – 3 mois de streaming musical sans publicité. Livraison instantanée.",
+      "it": "Credito Spotify Premium CHF 30 – 3 mesi di streaming musicale senza pubblicità. Consegna immediata.",
+      "en": "Spotify Premium Credit CHF 30 – 3 months of ad-free music streaming. Instant delivery."
+    },
+    "image": "/images/products/spotify-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["streaming", "spotify", "musik"]
+  },
+  {
+    "id": "apple-50",
+    "name": "Apple App Store & iTunes CHF 50",
+    "category": "mobile",
+    "brand": "Apple",
+    "price": 50.00,
+    "margin": 0.07,
+    "currency": "CHF",
+    "description": {
+      "de": "Apple Guthaben CHF 50 – Für Apps, Spiele, Musik, Filme und iCloud. iPhone und iPad kompatibel.",
+      "fr": "Crédit Apple CHF 50 – Pour les apps, jeux, musique, films et iCloud. Compatible iPhone et iPad.",
+      "it": "Credito Apple CHF 50 – Per app, giochi, musica, film e iCloud. Compatibile con iPhone e iPad.",
+      "en": "Apple Credit CHF 50 – For apps, games, music, movies and iCloud. iPhone and iPad compatible."
+    },
+    "image": "/images/products/apple-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["mobile", "apple", "ios", "beliebt"]
+  },
+  {
+    "id": "google-play-50",
+    "name": "Google Play CHF 50",
+    "category": "mobile",
+    "brand": "Google",
+    "price": 50.00,
+    "margin": 0.07,
+    "currency": "CHF",
+    "description": {
+      "de": "Google Play Guthaben CHF 50 – Für Android Apps, Spiele, Filme und Bücher. Sofortige Lieferung.",
+      "fr": "Crédit Google Play CHF 50 – Pour les apps Android, jeux, films et livres. Livraison instantanée.",
+      "it": "Credito Google Play CHF 50 – Per app Android, giochi, film e libri. Consegna immediata.",
+      "en": "Google Play Credit CHF 50 – For Android apps, games, movies and books. Instant delivery."
+    },
+    "image": "/images/products/google-play-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["mobile", "android", "google"]
+  },
+  {
+    "id": "roblox-25",
+    "name": "Roblox CHF 25",
+    "category": "gaming",
+    "brand": "Roblox",
+    "price": 25.00,
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "Roblox Guthaben CHF 25 – Kaufe Robux und Premium-Abos. Perfekt für junge Gamer.",
+      "fr": "Crédit Roblox CHF 25 – Achetez des Robux et des abonnements Premium. Parfait pour les jeunes joueurs.",
+      "it": "Credito Roblox CHF 25 – Acquista Robux e abbonamenti Premium. Perfetto per giovani gamer.",
+      "en": "Roblox Credit CHF 25 – Buy Robux and Premium subscriptions. Perfect for young gamers."
+    },
+    "image": "/images/products/roblox-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "roblox", "kinder"]
+  },
+  {
+    "id": "nintendo-50",
+    "name": "Nintendo eShop CHF 50",
+    "category": "gaming",
+    "brand": "Nintendo",
+    "price": 50.00,
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "Nintendo eShop Guthaben CHF 50 – Für Nintendo Switch Spiele und DLCs. Sofortige Lieferung.",
+      "fr": "Crédit Nintendo eShop CHF 50 – Pour les jeux et DLC Nintendo Switch. Livraison instantanée.",
+      "it": "Credito Nintendo eShop CHF 50 – Per giochi e DLC Nintendo Switch. Consegna immediata.",
+      "en": "Nintendo eShop Credit CHF 50 – For Nintendo Switch games and DLCs. Instant delivery."
+    },
+    "image": "/images/products/nintendo-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "nintendo", "switch", "beliebt"]
+  },
+  {
+    "id": "amazon-50",
+    "name": "Amazon.de Geschenkgutschein CHF 50",
+    "category": "shopping",
+    "brand": "Amazon",
+    "price": 50.00,
+    "margin": 0.05,
+    "currency": "CHF",
+    "description": {
+      "de": "Amazon.de Geschenkgutschein CHF 50 – Einlösbar für Millionen von Produkten auf Amazon.de.",
+      "fr": "Bon cadeau Amazon.de CHF 50 – Utilisable pour des millions de produits sur Amazon.de.",
+      "it": "Buono regalo Amazon.de CHF 50 – Riscattabile per milioni di prodotti su Amazon.de.",
+      "en": "Amazon.de Gift Card CHF 50 – Redeemable for millions of products on Amazon.de."
+    },
+    "image": "/images/products/amazon-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "DE",
+    "tags": ["shopping", "amazon", "geschenk"]
+  }
+]
