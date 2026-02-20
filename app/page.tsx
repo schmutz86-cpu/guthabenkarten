@@ -1,79 +1,108 @@
+'use client';
+
 import Link from 'next/link';
 import products from '@/data/products.json';
-import { CartButton } from '@/components/CartButton';
+import TopBar from '@/components/TopBar';
+import { useLanguage } from '@/lib/LanguageContext';
+
+// Brand images from Wikipedia Commons
+const brandImages: Record<string, string> = {
+  'Steam': 'https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg',
+  'PlayStation': 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg',
+  'Xbox': 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg',
+  'Nintendo': 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg',
+  'Netflix': 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
+  'Spotify': 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg',
+  'Apple': 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
+  'Google': 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg',
+  'Roblox': 'https://upload.wikimedia.org/wikipedia/commons/5/58/Roblox_Vertical_2022.svg',
+  'Amazon': 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
+};
 
 export default function HomePage() {
+  const { language, t } = useLanguage();
   const featured = products.filter(p => p.tags.includes('beliebt')).slice(0, 4);
 
+  const getProductDescription = (product: typeof products[0]) => {
+    return product.description[language] || product.description.de;
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      {/* Header */}
-      <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-white hover:text-purple-300 transition-colors">
-            Guthabenkarten.ch
-          </Link>
-          <CartButton />
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+      <TopBar />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-          Guthabenkarten.ch
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 sm:pb-16 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Guthabenkarten.ch
+          </span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          Gaming, Streaming & Shopping Cards – Sofort per E-Mail – 100% Sicher
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+          {t.home.heroSubtitle}
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <span className="bg-green-500/20 text-green-300 px-6 py-3 rounded-full text-sm font-semibold border border-green-500/30">
-            ✓ Sofortlieferung (30-60 Sek.)
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <span className="bg-green-500/20 text-green-300 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-green-500/30">
+            ✓ {t.common.instantDelivery}
           </span>
-          <span className="bg-blue-500/20 text-blue-300 px-6 py-3 rounded-full text-sm font-semibold border border-blue-500/30">
-            ✓ CHF Preise - Keine Gebühren
+          <span className="bg-blue-500/20 text-blue-300 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-blue-500/30">
+            ✓ {t.common.chfPrices}
           </span>
-          <span className="bg-purple-500/20 text-purple-300 px-6 py-3 rounded-full text-sm font-semibold border border-purple-500/30">
-            ✓ 24/7 Verfügbar
+          <span className="bg-purple-500/20 text-purple-300 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-purple-500/30">
+            ✓ {t.common.available247}
           </span>
         </div>
       </section>
 
       {/* Featured Products */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-          🔥 Beliebteste Cards
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
+          🔥 {t.home.featuredProducts}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {featured.map((product) => (
             <Link
               key={product.id}
               href={`/produkt/${product.id}`}
-              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/15 transition-all hover:scale-105 border border-white/20 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/20"
+              className="group bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 hover:bg-slate-700/50 transition-all border border-slate-700 hover:border-blue-500/50"
             >
-              {/* Product Image Placeholder */}
-              <div className="relative bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl h-48 mb-4 flex items-center justify-center overflow-hidden">
-                <div className="text-white/60 text-6xl font-bold group-hover:scale-110 transition-transform">
-                  {product.brand}
-                </div>
-                <span className="absolute top-3 right-3 bg-yellow-500/90 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-                  Beliebt
-                </span>
+              {/* Product Image */}
+              <div className="relative bg-white rounded-lg sm:rounded-xl h-28 sm:h-36 lg:h-40 mb-3 sm:mb-4 flex items-center justify-center overflow-hidden p-2 sm:p-4">
+                {brandImages[product.brand] ? (
+                  <img 
+                    src={brandImages[product.brand]} 
+                    alt={product.brand}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="text-2xl sm:text-3xl font-bold text-slate-800">
+                    {product.brand.slice(0, 2)}
+                  </span>
+                )}
+                {product.tags.includes('beliebt') && (
+                  <span className="absolute top-2 right-2 bg-yellow-500 text-yellow-900 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold">
+                    ★
+                  </span>
+                )}
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+              <h3 className="text-sm sm:text-base font-bold text-white mb-1 sm:mb-2 line-clamp-2 leading-tight">
                 {product.name}
               </h3>
-              <p className="text-gray-300 text-sm mb-4 line-clamp-2">
-                {product.description.de}
+              
+              <p className="text-slate-400 text-xs line-clamp-2 mb-2 hidden sm:block">
+                {getProductDescription(product)}
               </p>
               
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-purple-300">
-                  {product.price.toFixed(2)} CHF
+                <span className="text-base sm:text-lg font-bold text-blue-400">
+                  {product.price.toFixed(0)} CHF
                 </span>
-                <span className="text-green-400 text-sm flex items-center gap-1">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  Verfügbar
+                <span className="text-green-400 text-xs flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></span>
+                  <span className="hidden sm:inline">{t.common.secure}</span>
+                  <span className="sm:hidden">✓</span>
                 </span>
               </div>
             </Link>
@@ -82,42 +111,40 @@ export default function HomePage() {
       </section>
 
       {/* All Products */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-          Alle Guthabenkarten
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
+          {t.home.allProducts}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {products.map((product) => (
             <Link
               key={product.id}
               href={`/produkt/${product.id}`}
-              className="group bg-white/5 backdrop-blur-sm rounded-xl p-4 hover:bg-white/10 transition-all border border-white/10 hover:border-purple-500/30"
+              className="group bg-slate-800/30 backdrop-blur rounded-lg sm:rounded-xl p-3 sm:p-4 hover:bg-slate-700/30 transition-all border border-slate-700/50"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white/80 font-bold text-xs">{product.brand.slice(0, 2)}</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1.5 sm:p-2 overflow-hidden">
+                  {brandImages[product.brand] ? (
+                    <img 
+                      src={brandImages[product.brand]} 
+                      alt={product.brand}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-slate-800 font-bold text-xs sm:text-sm">{product.brand.slice(0, 2)}</span>
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-white font-semibold text-sm truncate group-hover:text-purple-300 transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-400 text-xs capitalize">{product.category}</p>
+                  <h3 className="text-white font-semibold text-xs sm:text-sm truncate">{product.name}</h3>
+                  <p className="text-slate-400 text-[10px] sm:text-xs capitalize">{product.category}</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 text-xs mb-3 line-clamp-2">
-                {product.description.de}
-              </p>
-              
               <div className="flex items-center justify-between">
-                <span className="text-purple-300 font-bold">
-                  {product.price.toFixed(2)} CHF
-                </span>
+                <span className="text-blue-400 font-bold text-sm sm:text-base">{product.price.toFixed(0)} CHF</span>
                 {product.inStock && (
-                  <span className="text-green-400 text-xs flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-                    Verfügbar
-                  </span>
+                  <span className="text-green-400 text-[10px] sm:text-xs">✓</span>
                 )}
               </div>
             </Link>
@@ -126,65 +153,59 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-            <div className="text-6xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Sofortlieferung</h3>
-            <p className="text-gray-300">
-              Code per E-Mail in 30-60 Sekunden. Keine Wartezeit, sofort einsatzbereit.
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
+            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">⚡</div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.instantTitle}</h3>
+            <p className="text-slate-400 text-xs sm:text-sm">
+              {t.features.instantDesc}
             </p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-            <div className="text-6xl mb-4">🇨🇭</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Swiss Made</h3>
-            <p className="text-gray-300">
-              CHF Preise, Schweizer Zahlungsmethoden (Twint), keine Umrechnungsgebühren.
+          <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
+            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🇨🇭</div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.swissMadeTitle}</h3>
+            <p className="text-slate-400 text-xs sm:text-sm">
+              {t.features.swissMadeDesc}
             </p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-            <div className="text-6xl mb-4">🔒</div>
-            <h3 className="text-2xl font-bold text-white mb-3">100% Sicher</h3>
-            <p className="text-gray-300">
-              Sichere Zahlung via Stripe, geprüfte Codes, Geld-zurück-Garantie.
+          <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
+            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🔒</div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.secureTitle}</h3>
+            <p className="text-slate-400 text-xs sm:text-sm">
+              {t.features.secureDesc}
             </p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/30 backdrop-blur-sm border-t border-white/10 mt-16">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="md:col-span-2">
-              <h4 className="text-white font-bold text-xl mb-3">Guthabenkarten.ch</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Ihr Schweizer Online-Shop für Gaming, Streaming und Shopping Guthabenkarten. 
-                Sofortlieferung, sicher und einfach – 24/7 verfügbar.
-              </p>
-              <p className="text-gray-400 text-xs">
-                Made with ❤️ in Switzerland
+      <footer className="bg-slate-900 border-t border-slate-800 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="col-span-2 sm:col-span-1">
+              <h4 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">Guthabenkarten.ch</h4>
+              <p className="text-slate-400 text-xs sm:text-sm">
+                {t.footer.tagline}
               </p>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-3">Support</h4>
-              <ul className="text-gray-300 text-sm space-y-2">
-                <li><Link href="/faq" className="hover:text-purple-300 transition-colors">FAQ</Link></li>
-                <li><Link href="/kontakt" className="hover:text-purple-300 transition-colors">Kontakt</Link></li>
-                <li><Link href="/rueckerstattung" className="hover:text-purple-300 transition-colors">Rückerstattung</Link></li>
+              <h4 className="text-white font-bold text-xs sm:text-sm mb-2 sm:mb-3">{t.footer.support}</h4>
+              <ul className="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
+                <li><Link href="/faq" className="hover:text-white">{t.footer.faq}</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white">{t.footer.contact}</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-3">Rechtliches</h4>
-              <ul className="text-gray-300 text-sm space-y-2">
-                <li><Link href="/agb" className="hover:text-purple-300 transition-colors">AGB</Link></li>
-                <li><Link href="/datenschutz" className="hover:text-purple-300 transition-colors">Datenschutz</Link></li>
-                <li><Link href="/impressum" className="hover:text-purple-300 transition-colors">Impressum</Link></li>
+              <h4 className="text-white font-bold text-xs sm:text-sm mb-2 sm:mb-3">{t.footer.legal}</h4>
+              <ul className="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
+                <li><Link href="/agb" className="hover:text-white">{t.footer.terms}</Link></li>
+                <li><Link href="/datenschutz" className="hover:text-white">{t.footer.privacy}</Link></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
-            © 2026 Guthabenkarten.ch. Alle Rechte vorbehalten.
+          <div className="border-t border-slate-800 pt-4 sm:pt-6 text-center text-slate-500 text-xs">
+            {t.footer.copyright}
           </div>
         </div>
       </footer>

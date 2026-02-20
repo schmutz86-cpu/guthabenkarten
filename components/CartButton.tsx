@@ -1,25 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCart } from '@/lib/CartContext';
 import Link from 'next/link';
 
 export function CartButton() {
-  const [itemCount, setItemCount] = useState(0);
-
-  useEffect(() => {
-    updateCount();
-    
-    const handleCartUpdate = () => updateCount();
-    window.addEventListener('cartUpdated', handleCartUpdate);
-    
-    return () => window.removeEventListener('cartUpdated', handleCartUpdate);
-  }, []);
-
-  const updateCount = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const total = cart.reduce((sum: number, item: any) => sum + item.quantity, 0);
-    setItemCount(total);
-  };
+  const { totalItems } = useCart();
 
   return (
     <Link
@@ -40,9 +25,9 @@ export function CartButton() {
         />
       </svg>
       <span className="text-white font-semibold">Warenkorb</span>
-      {itemCount > 0 && (
+      {totalItems > 0 && (
         <span className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
-          {itemCount}
+          {totalItems}
         </span>
       )}
     </Link>

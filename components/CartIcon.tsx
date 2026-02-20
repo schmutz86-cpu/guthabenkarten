@@ -9,7 +9,7 @@ export default function CartIcon() {
 
   return (
     <button
-      onClick={() => router.push('/cart')}
+      onClick={() => router.push('/warenkorb')}
       className="relative bg-slate-800/50 hover:bg-slate-800 backdrop-blur rounded-lg px-4 py-2 transition-all border border-slate-700"
     >
       <span className="text-2xl">🛒</span>

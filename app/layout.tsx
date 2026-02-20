@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { CartProvider } from "@/lib/CartContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import CartIcon from "@/components/CartIcon";
+import TopBar from "@/components/TopBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,16 +28,14 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950`}
       >
         <LanguageProvider>
           <CartProvider>
-            {/* Header with language switcher and cart */}
-            <div className="fixed top-4 right-4 z-50 flex gap-3">
-              <CartIcon />
-              <LanguageSwitcher />
-            </div>
-            {children}
+            <TopBar />
+            <main className="pt-14">
+              {children}
+            </main>
           </CartProvider>
         </LanguageProvider>
       </body>

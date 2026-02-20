@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useCart } from '@/lib/CartContext';
 
 type Product = {
   id: string;
@@ -18,39 +19,33 @@ type Props = {
 export function AddToCartButton({ product }: Props) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
+  const { addItem, items, updateQuantity, removeItem } = useCart();
 
   const addToCart = () => {
-    // Get existing cart from localStorage
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    
-    // Check if product already in cart
-    const existingItem = cart.find((item: any) => item.id === product.id);
+    // Check if product already exists in cart
+    const existingItem = items.find(item => item.productId === product.id);
     
     if (existingItem) {
       // Update quantity
-      existingItem.quantity += quantity;
+      updateQuantity(product.id, product.price, existingItem.quantity + quantity);
     } else {
-      // Add new item
-      cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        currency: product.currency,
-        image: product.image,
-        brand: product.brand,
-        quantity: quantity,
+      // Add new item using CartContext
+      addItem({
+        productId: product.id,
+        productName: product.name,
+        denomination: product.price,
+        platform: product.brand,
       });
+      
+      // If quantity > 1, update it
+      if (quantity > 1) {
+        updateQuantity(product.id, product.price, quantity);
+      }
     }
-    
-    // Save to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
     
     // Show confirmation
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
-    
-    // Dispatch event for cart update
-    window.dispatchEvent(new Event('cartUpdated'));
   };
 
   return (

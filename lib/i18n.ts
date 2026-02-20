@@ -20,6 +20,11 @@ export interface Translations {
   product: {
     description: string;
     denominations: string;
+    examples: string;
+    deliveryInfo: string;
+    deliveryMethod: string;
+    region: string;
+    paymentMethods: string;
     howItWorks: string;
     step1: string;
     step2: string;
@@ -60,8 +65,8 @@ export interface Translations {
 export const translations: Record<Language, Translations> = {
   de: {
     common: {
-      siteName: 'Swiss Gamer Cards',
-      tagline: 'Gaming Gift Cards - Sofort per E-Mail - 100% Sicher',
+      siteName: 'Guthabenkarten.ch',
+      tagline: 'Gaming Guthabenkarten - Sofort per E-Mail - 100% Sicher',
       instantDelivery: 'Sofortlieferung (30 Sek.)',
       chfPrices: 'CHF Preise - Keine Gebühren',
       available247: '24/7 Verfügbar',
@@ -69,26 +74,31 @@ export const translations: Record<Language, Translations> = {
       selectDenomination: 'Wähle einen Betrag',
       deliveryTime: '30-60 Sekunden',
       secure: 'Sicher',
-      backToHome: 'Zurück zur Startseite',
+      backToHome: 'Home',
       currency: 'CHF',
     },
     product: {
       description: 'Beschreibung',
-      denominations: 'Verfügbare Beträge',
-      howItWorks: 'So funktioniert es',
-      step1: 'Wähle deinen Betrag',
-      step2: 'Sicher bezahlen',
-      step3: 'Code sofort per E-Mail erhalten',
-      features: 'Vorteile',
+      denominations: 'Wofür kann ich es verwenden?',
+      examples: 'Beispiele:',
+      deliveryInfo: 'Lieferung & Sicherheit',
+      deliveryMethod: 'Zustellung: Per E-Mail mit Anleitung',
+      region: 'Region',
+      paymentMethods: 'Zahlung: Kreditkarte, Twint, PayPal',
+      howItWorks: 'So funktioniert\'s',
+      step1: 'Wähle Menge und leg in den Warenkorb',
+      step2: 'Bezahle sicher mit Twint oder Karte',
+      step3: 'Code kommt sofort in deine E-Mail',
+      features: 'Garantie',
       instantDeliveryDesc: 'Code innerhalb von 30-60 Sekunden per E-Mail',
       securePaymentDesc: 'Sichere Zahlung mit Stripe',
       validCodesDesc: 'Geprüfte und gültige Gift Card Codes',
     },
     home: {
-      hero: '🎮 Swiss Gamer Cards',
-      heroSubtitle: 'Gaming Gift Cards - Sofort per E-Mail - 100% Sicher',
-      featuredProducts: 'Beliebteste Gift Cards',
-      allProducts: 'Alle Gift Cards',
+      hero: '🎮 Guthabenkarten.ch',
+      heroSubtitle: 'Gaming, Streaming & Shopping Cards – Sofort per E-Mail – 100% Sicher',
+      featuredProducts: 'Beliebteste Cards',
+      allProducts: 'Alle Guthabenkarten',
     },
     features: {
       instantTitle: 'Sofortlieferung',
@@ -99,7 +109,7 @@ export const translations: Record<Language, Translations> = {
       secureDesc: 'Sichere Zahlung, geprüfte Codes, Geld-zurück-Garantie.',
     },
     footer: {
-      tagline: 'Ihr Schweizer Online-Shop für Gaming Gift Cards. Sofortlieferung, sicher und einfach.',
+      tagline: 'Ihr Schweizer Online-Shop für Gaming Guthabenkarten. Sofortlieferung, sicher und einfach.',
       support: 'Support',
       faq: 'FAQ',
       contact: 'Kontakt',
@@ -108,13 +118,13 @@ export const translations: Record<Language, Translations> = {
       terms: 'AGB',
       privacy: 'Datenschutz',
       impressum: 'Impressum',
-      copyright: '© 2026 Swiss Gamer Cards. Made with ❤️ in Switzerland.',
+      copyright: '© 2026 Guthabenkarten.ch',
     },
   },
   
   en: {
     common: {
-      siteName: 'Swiss Gamer Cards',
+      siteName: 'Guthabenkarten.ch',
       tagline: 'Gaming Gift Cards - Instant Email Delivery - 100% Secure',
       instantDelivery: 'Instant Delivery (30 Sec.)',
       chfPrices: 'CHF Prices - No Fees',
@@ -123,25 +133,30 @@ export const translations: Record<Language, Translations> = {
       selectDenomination: 'Select an Amount',
       deliveryTime: '30-60 seconds',
       secure: 'Secure',
-      backToHome: 'Back to Home',
+      backToHome: 'Home',
       currency: 'CHF',
     },
     product: {
       description: 'Description',
-      denominations: 'Available Amounts',
-      howItWorks: 'How It Works',
-      step1: 'Choose your amount',
-      step2: 'Pay securely',
-      step3: 'Receive code instantly via email',
-      features: 'Features',
+      denominations: 'What can I use it for?',
+      examples: 'Examples:',
+      deliveryInfo: 'Delivery & Security',
+      deliveryMethod: 'Delivery: Via email with instructions',
+      region: 'Region',
+      paymentMethods: 'Payment: Credit card, Twint, PayPal',
+      howItWorks: 'How it works',
+      step1: 'Choose quantity and add to cart',
+      step2: 'Pay securely with Twint or card',
+      step3: 'Code arrives instantly via email',
+      features: 'Guarantee',
       instantDeliveryDesc: 'Code delivered via email within 30-60 seconds',
       securePaymentDesc: 'Secure payment with Stripe',
       validCodesDesc: 'Verified and valid gift card codes',
     },
     home: {
-      hero: '🎮 Swiss Gamer Cards',
-      heroSubtitle: 'Gaming Gift Cards - Instant Email Delivery - 100% Secure',
-      featuredProducts: 'Featured Gift Cards',
+      hero: '🎮 Guthabenkarten.ch',
+      heroSubtitle: 'Gaming, Streaming & Shopping Cards – Instant Email Delivery – 100% Secure',
+      featuredProducts: 'Popular Cards',
       allProducts: 'All Gift Cards',
     },
     features: {
@@ -162,13 +177,13 @@ export const translations: Record<Language, Translations> = {
       terms: 'Terms & Conditions',
       privacy: 'Privacy Policy',
       impressum: 'Imprint',
-      copyright: '© 2026 Swiss Gamer Cards. Made with ❤️ in Switzerland.',
+      copyright: '© 2026 Guthabenkarten.ch',
     },
   },
   
   fr: {
     common: {
-      siteName: 'Swiss Gamer Cards',
+      siteName: 'Guthabenkarten.ch',
       tagline: 'Cartes Cadeaux Gaming - Livraison Instantanée - 100% Sécurisé',
       instantDelivery: 'Livraison Instantanée (30 Sec.)',
       chfPrices: 'Prix en CHF - Sans Frais',
@@ -177,25 +192,30 @@ export const translations: Record<Language, Translations> = {
       selectDenomination: 'Sélectionner un Montant',
       deliveryTime: '30-60 secondes',
       secure: 'Sécurisé',
-      backToHome: 'Retour à l\'Accueil',
+      backToHome: 'Accueil',
       currency: 'CHF',
     },
     product: {
       description: 'Description',
-      denominations: 'Montants Disponibles',
-      howItWorks: 'Comment ça Marche',
-      step1: 'Choisissez votre montant',
-      step2: 'Payez en toute sécurité',
-      step3: 'Recevez le code instantanément par email',
-      features: 'Avantages',
+      denominations: 'Pour quoi puis-je l\'utiliser ?',
+      examples: 'Exemples :',
+      deliveryInfo: 'Livraison & Sécurité',
+      deliveryMethod: 'Livraison: Par email avec instructions',
+      region: 'Région',
+      paymentMethods: 'Paiement: Carte, Twint, PayPal',
+      howItWorks: 'Comment ça marche',
+      step1: 'Choisissez la quantité et ajoutez au panier',
+      step2: 'Payez en toute sécurité avec Twint ou carte',
+      step3: 'Le code arrive instantanément par email',
+      features: 'Garantie',
       instantDeliveryDesc: 'Code livré par email en 30-60 secondes',
       securePaymentDesc: 'Paiement sécurisé avec Stripe',
       validCodesDesc: 'Codes de cartes cadeaux vérifiés et valides',
     },
     home: {
-      hero: '🎮 Swiss Gamer Cards',
-      heroSubtitle: 'Cartes Cadeaux Gaming - Livraison Instantanée - 100% Sécurisé',
-      featuredProducts: 'Cartes Cadeaux Populaires',
+      hero: '🎮 Guthabenkarten.ch',
+      heroSubtitle: 'Cartes Gaming, Streaming & Shopping – Livraison instantanée – 100% Sécurisé',
+      featuredProducts: 'Cartes Populaires',
       allProducts: 'Toutes les Cartes Cadeaux',
     },
     features: {
@@ -216,13 +236,13 @@ export const translations: Record<Language, Translations> = {
       terms: 'Conditions Générales',
       privacy: 'Politique de Confidentialité',
       impressum: 'Mentions Légales',
-      copyright: '© 2026 Swiss Gamer Cards. Made with ❤️ in Switzerland.',
+      copyright: '© 2026 Guthabenkarten.ch',
     },
   },
   
   it: {
     common: {
-      siteName: 'Swiss Gamer Cards',
+      siteName: 'Guthabenkarten.ch',
       tagline: 'Gift Card Gaming - Consegna Istantanea - 100% Sicuro',
       instantDelivery: 'Consegna Istantanea (30 Sec.)',
       chfPrices: 'Prezzi in CHF - Senza Commissioni',
@@ -231,25 +251,30 @@ export const translations: Record<Language, Translations> = {
       selectDenomination: 'Seleziona un Importo',
       deliveryTime: '30-60 secondi',
       secure: 'Sicuro',
-      backToHome: 'Torna alla Home',
+      backToHome: 'Home',
       currency: 'CHF',
     },
     product: {
       description: 'Descrizione',
-      denominations: 'Importi Disponibili',
-      howItWorks: 'Come Funziona',
-      step1: 'Scegli il tuo importo',
-      step2: 'Paga in modo sicuro',
-      step3: 'Ricevi il codice istantaneamente via email',
-      features: 'Vantaggi',
+      denominations: 'Per cosa posso usarlo?',
+      examples: 'Esempi:',
+      deliveryInfo: 'Consegna & Sicurezza',
+      deliveryMethod: 'Consegna: Via email con istruzioni',
+      region: 'Regione',
+      paymentMethods: 'Pagamento: Carta, Twint, PayPal',
+      howItWorks: 'Come funziona',
+      step1: 'Scegli la quantità e aggiungi al carrello',
+      step2: 'Paga in modo sicuro con Twint o carta',
+      step3: 'Il codice arriva istantaneamente via email',
+      features: 'Garanzia',
       instantDeliveryDesc: 'Codice consegnato via email entro 30-60 secondi',
       securePaymentDesc: 'Pagamento sicuro con Stripe',
       validCodesDesc: 'Codici gift card verificati e validi',
     },
     home: {
-      hero: '🎮 Swiss Gamer Cards',
-      heroSubtitle: 'Gift Card Gaming - Consegna Istantanea - 100% Sicuro',
-      featuredProducts: 'Gift Card Popolari',
+      hero: '🎮 Guthabenkarten.ch',
+      heroSubtitle: 'Carte Gaming, Streaming & Shopping – Consegna immediata – 100% Sicuro',
+      featuredProducts: 'Carte Popolari',
       allProducts: 'Tutte le Gift Card',
     },
     features: {
@@ -270,11 +295,11 @@ export const translations: Record<Language, Translations> = {
       terms: 'Termini e Condizioni',
       privacy: 'Privacy Policy',
       impressum: 'Colophon',
-      copyright: '© 2026 Swiss Gamer Cards. Made with ❤️ in Switzerland.',
+      copyright: '© 2026 Guthabenkarten.ch',
     },
   },
 };
 
 export function getTranslations(lang: Language): Translations {
-  return translations[lang] || translations.de; // Default to German
+  return translations[lang] || translations.de;
 }
