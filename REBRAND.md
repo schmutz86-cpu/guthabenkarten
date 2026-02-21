@@ -52,9 +52,13 @@
 - [x] Footer copyright updated
 - [x] Daily log entry created (memory/2026-02-15.md)
 
+### Completed:
+- [x] **Register domain: guthabenkarten.ch** (Hostpoint, 2026-02-20)
+- [x] Configure email: info@guthabenkarten.ch (Hostpoint mail server)
+
 ### Pending:
-- [ ] **Register domain: guthabenkarten.ch**
-- [ ] Configure email: orders@guthabenkarten.ch
+- [ ] DNS pointing to Vercel
+- [ ] SSL certificate configuration
 - [ ] Update Vercel project name (on deployment)
 - [ ] Create favicon with new branding
 - [ ] Design logo (optional - can launch without)

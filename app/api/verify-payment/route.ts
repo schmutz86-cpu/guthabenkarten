@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-01-27.acacia',
-});
+async function getStripe() {
+  const { default: Stripe } = await import('stripe');
+  const secretKey = process.env.STRIPE_SECRET_KEY;
+  if (!secretKey) {
+    throw new Error('STRIPE_SECRET_KEY is not set');
+  }
+  return new Stripe(secretKey, {
+    apiVersion: '2024-12-18.acacia' as any,
+  });
+}
 
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams;
@@ -17,6 +23,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
+    const stripe = await getStripe();
     const session = await stripe.checkout.sessions.retrieve(sessionId);
     
     return NextResponse.json({
