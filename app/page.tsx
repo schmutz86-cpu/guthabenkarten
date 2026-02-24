@@ -32,8 +32,8 @@ export default function HomePage() {
       <TopBar />
 
       {/* Under Construction Banner */}
-      <div className="bg-amber-500/90 text-black px-4 py-3 text-center font-medium">
-        🚧 <span className="font-bold">Hinweis:</span> Diese Website befindet sich im Aufbau. Bestellungen sind aktuell noch nicht möglich. Bei Fragen: info@guthabenkarten.ch
+      <div className="bg-amber-500/90 text-black px-4 py-3 text-center font-medium text-sm sm:text-base">
+        🚧 <span className="font-bold">{language === 'de' ? 'Hinweis:' : 'Notice:'}</span> {language === 'de' ? 'Diese Website befindet sich im Aufbau. Bestellungen sind aktuell noch nicht möglich.' : 'This site is under construction. Orders are not yet possible.'} {language === 'de' ? 'Bei Fragen:' : 'Questions?'} <a href="mailto:info@guthabenkarten.ch" className="underline font-semibold">info@guthabenkarten.ch</a>
       </div>
 
       {/* Hero Section */}
