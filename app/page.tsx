@@ -31,6 +31,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
       <TopBar />
 
+      {/* Under Construction Banner */}
+      <div className="bg-amber-500/90 text-black px-4 py-3 text-center font-medium">
+        🚧 <span className="font-bold">Hinweis:</span> Diese Website befindet sich im Aufbau. Bestellungen sind aktuell noch nicht möglich. Bei Fragen: info@guthabenkarten.ch
+      </div>
+
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 sm:pb-16 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
