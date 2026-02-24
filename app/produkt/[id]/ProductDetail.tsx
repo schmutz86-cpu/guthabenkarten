@@ -4,18 +4,18 @@ import Link from 'next/link';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { useLanguage } from '@/lib/LanguageContext';
 
-// Brand images from reliable CDN (jsDelivr/simple-icons)
+// Brand images - using Wikipedia thumbnails for reliability
 const brandImages: Record<string, string> = {
-  'Steam': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/steam.svg',
-  'PlayStation': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/playstation.svg',
-  'Xbox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xbox.svg',
-  'Nintendo': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nintendoswitch.svg',
-  'Netflix': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg',
-  'Spotify': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg',
-  'Apple': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg',
-  'Google': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg',
-  'Roblox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/roblox.svg',
-  'Amazon': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg',
+  'Steam': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png',
+  'PlayStation': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/200px-Playstation_logo_colour.svg.png',
+  'Xbox': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png',
+  'Nintendo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nintendo.svg/200px-Nintendo.svg.png',
+  'Netflix': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png',
+  'Spotify': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/200px-Spotify_logo_without_text.svg.png',
+  'Apple': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png',
+  'Google': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
+  'Roblox': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Roblox_logo_2022.svg/200px-Roblox_logo_2022.svg.png',
+  'Amazon': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png',
 };
 
 // Extended product info with translations

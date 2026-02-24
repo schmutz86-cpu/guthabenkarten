@@ -4,23 +4,25 @@ import Link from 'next/link';
 import products from '@/data/products.json';
 import TopBar from '@/components/TopBar';
 import { useLanguage } from '@/lib/LanguageContext';
+import { useSiteConfig } from '@/lib/config';
 
-// Brand images from reliable CDNs
+// Brand images - using Wikipedia thumbnails for reliability
 const brandImages: Record<string, string> = {
-  'Steam': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/steam.svg',
-  'PlayStation': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/playstation.svg',
-  'Xbox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xbox.svg',
-  'Nintendo': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nintendoswitch.svg',
-  'Netflix': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg',
-  'Spotify': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg',
-  'Apple': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg',
-  'Google': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg',
-  'Roblox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/roblox.svg',
-  'Amazon': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg',
+  'Steam': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png',
+  'PlayStation': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/200px-Playstation_logo_colour.svg.png',
+  'Xbox': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png',
+  'Nintendo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nintendo.svg/200px-Nintendo.svg.png',
+  'Netflix': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png',
+  'Spotify': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/200px-Spotify_logo_without_text.svg.png',
+  'Apple': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png',
+  'Google': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
+  'Roblox': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Roblox_logo_2022.svg/200px-Roblox_logo_2022.svg.png',
+  'Amazon': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png',
 };
 
 export default function HomePage() {
   const { language, t } = useLanguage();
+  const site = useSiteConfig();
   const featured = products.filter(p => p.tags.includes('beliebt')).slice(0, 4);
 
   const getProductDescription = (product: typeof products[0]) => {
@@ -33,14 +35,14 @@ export default function HomePage() {
 
       {/* Under Construction Banner */}
       <div className="bg-amber-500/90 text-black px-4 py-3 text-center font-medium text-sm sm:text-base">
-        🚧 <span className="font-bold">{language === 'de' ? 'Hinweis:' : 'Notice:'}</span> {language === 'de' ? 'Diese Website befindet sich im Aufbau. Bestellungen sind aktuell noch nicht möglich.' : 'This site is under construction. Orders are not yet possible.'} {language === 'de' ? 'Bei Fragen:' : 'Questions?'} <a href="mailto:info@guthabenkarten.ch" className="underline font-semibold">info@guthabenkarten.ch</a>
+        🚧 <span className="font-bold">{language === 'de' ? 'Hinweis:' : 'Notice:'}</span> {language === 'de' ? 'Diese Website befindet sich im Aufbau. Bestellungen sind aktuell noch nicht möglich.' : 'This site is under construction. Orders are not yet possible.'} {language === 'de' ? 'Bei Fragen:' : 'Questions?'} <a href={`mailto:${site.email}`} className="underline font-semibold">{site.email}</a>
       </div>
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 sm:pb-16 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Guthabenkarten.ch
+            {site.name}
           </span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
@@ -51,7 +53,7 @@ export default function HomePage() {
             ✓ {t.common.instantDelivery}
           </span>
           <span className="bg-blue-500/20 text-blue-300 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-blue-500/30">
-            ✓ {t.common.chfPrices}
+            ✓ {site.currency} {language === 'de' ? 'Preise' : 'Prices'}
           </span>
           <span className="bg-purple-500/20 text-purple-300 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-purple-500/30">
             ✓ {t.common.available247}
@@ -102,7 +104,7 @@ export default function HomePage() {
               
               <div className="flex items-center justify-between">
                 <span className="text-base sm:text-lg font-bold text-blue-400">
-                  {product.price.toFixed(0)} CHF
+                  {site.currency === 'EUR' ? '€' : ''}{product.price.toFixed(0)} {site.currency}
                 </span>
                 <span className="text-green-400 text-xs flex items-center gap-1">
                   <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></span>
@@ -147,7 +149,7 @@ export default function HomePage() {
               </div>
               
               <div className="flex items-center justify-between">
-                <span className="text-blue-400 font-bold text-sm sm:text-base">{product.price.toFixed(0)} CHF</span>
+                <span className="text-blue-400 font-bold text-sm sm:text-base">{site.currency === 'EUR' ? '€' : ''}{product.price.toFixed(0)} {site.currency}</span>
                 {product.inStock && (
                   <span className="text-green-400 text-[10px] sm:text-xs">✓</span>
                 )}
@@ -189,7 +191,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="col-span-2 sm:col-span-1">
-              <h4 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">Guthabenkarten.ch</h4>
+              <h4 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">{site.name}</h4>
               <p className="text-slate-400 text-xs sm:text-sm">
                 {t.footer.tagline}
               </p>
