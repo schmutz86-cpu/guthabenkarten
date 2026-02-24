@@ -4,18 +4,18 @@ import Link from 'next/link';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { useLanguage } from '@/lib/LanguageContext';
 
-// Brand images from Wikipedia Commons
+// Brand images from reliable CDN (jsDelivr/simple-icons)
 const brandImages: Record<string, string> = {
-  'Steam': 'https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg',
-  'PlayStation': 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg',
-  'Xbox': 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg',
-  'Nintendo': 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg',
-  'Netflix': 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
-  'Spotify': 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg',
-  'Apple': 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
-  'Google': 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg',
-  'Roblox': 'https://upload.wikimedia.org/wikipedia/commons/5/58/Roblox_Vertical_2022.svg',
-  'Amazon': 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
+  'Steam': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/steam.svg',
+  'PlayStation': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/playstation.svg',
+  'Xbox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xbox.svg',
+  'Nintendo': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nintendoswitch.svg',
+  'Netflix': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg',
+  'Spotify': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg',
+  'Apple': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg',
+  'Google': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg',
+  'Roblox': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/roblox.svg',
+  'Amazon': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg',
 };
 
 // Extended product info with translations
