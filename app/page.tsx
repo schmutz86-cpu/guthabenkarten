@@ -199,6 +199,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-white font-bold text-xs sm:text-sm mb-2 sm:mb-3">{t.footer.legal}</h4>
               <ul className="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
+                <li><Link href="/impressum" className="hover:text-white">Impressum</Link></li>
                 <li><Link href="/agb" className="hover:text-white">{t.footer.terms}</Link></li>
                 <li><Link href="/datenschutz" className="hover:text-white">{t.footer.privacy}</Link></li>
               </ul>

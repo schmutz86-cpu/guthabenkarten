@@ -4,6 +4,10 @@ import { useState } from 'react';
 import { useCart } from '@/lib/CartContext';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useRouter } from 'next/navigation';
+import { loadStripe } from '@stripe/stripe-js';
+
+// Initialize Stripe outside component to avoid recreating
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_live_51T25gBBpWM9f8xdpE7CuvVfchwRmW54jcDCKlPdz3JVd2XT5Ki6lKny1qdZRr1N0rOdkDRGtxnpz9gr0em6JyOaL00F3nFIBq4');
 
 export default function CheckoutPage() {
   const { items, totalPrice, clearCart } = useCart();
@@ -17,6 +21,7 @@ export default function CheckoutPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
 
   if (items.length === 0) {
     router.push('/cart');
@@ -51,12 +56,50 @@ export default function CheckoutPage() {
       return;
     }
 
-    // TODO: Integrate with Stripe payment
-    // For now, just show success
-    alert(`Order placed! Email: ${formData.email}\nTotal: CHF ${totalPrice.toFixed(2)}\n\n(Payment integration coming soon)`);
-    
-    clearCart();
-    router.push('/');
+    setLoading(true);
+
+    try {
+      // Call our API to create Stripe Checkout Session
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          items: items.map(item => ({
+            productId: item.productId,
+            productName: item.productName,
+            platform: item.platform || 'Guthabenkarte',
+            denomination: item.denomination,
+            quantity: item.quantity,
+          })),
+          email: formData.email,
+          successUrl: `${window.location.origin}/bestellung/erfolgreich?session_id={CHECKOUT_SESSION_ID}`,
+          cancelUrl: `${window.location.origin}/checkout?cancelled=true`,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Checkout failed');
+      }
+
+      const { sessionId } = await response.json();
+
+      // Redirect to Stripe Checkout
+      const stripe = await stripePromise;
+      if (stripe) {
+        const { error } = await stripe.redirectToCheckout({ sessionId });
+        if (error) {
+          throw error;
+        }
+      }
+    } catch (error: any) {
+      console.error('Checkout error:', error);
+      alert(`Checkout fehlgeschlagen: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,10 +108,10 @@ export default function CheckoutPage() {
         {/* Header */}
         <div className="mb-8">
           <button
-            onClick={() => router.push('/cart')}
+            onClick={() => router.push('/warenkorb')}
             className="text-blue-300 hover:text-blue-200 mb-4 flex items-center gap-2"
           >
-            ← Back to Cart
+            ← Zurück zum Warenkorb
           </button>
           <h1 className="text-4xl font-bold text-white">Checkout</h1>
         </div>
@@ -79,38 +122,38 @@ export default function CheckoutPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Customer Info */}
               <div className="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700">
-                <h2 className="text-2xl font-bold text-white mb-6">Customer Information</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">Kundeninformationen</h2>
 
                 <div className="space-y-4">
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      Email Address *
+                      E-Mail-Adresse *
                     </label>
                     <input
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                      placeholder="your@email.com"
+                      placeholder="ihre@email.ch"
                     />
                     {errors.email && (
                       <p className="text-red-400 text-sm mt-1">{errors.email}</p>
                     )}
                     <p className="text-slate-400 text-sm mt-1">
-                      Gift codes will be sent to this email
+                      Die Guthabenkarten werden an diese E-Mail gesendet
                     </p>
                   </div>
 
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      Full Name *
+                      Vollständiger Name *
                     </label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                      placeholder="John Doe"
+                      placeholder="Max Mustermann"
                     />
                     {errors.name && (
                       <p className="text-red-400 text-sm mt-1">{errors.name}</p>
@@ -121,17 +164,29 @@ export default function CheckoutPage() {
 
               {/* Payment Info */}
               <div className="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700">
-                <h2 className="text-2xl font-bold text-white mb-6">Payment Method</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">Zahlungsmethode</h2>
                 
-                <div className="bg-yellow-900/20 border border-yellow-600/50 rounded-lg p-4 mb-4">
-                  <p className="text-yellow-300 text-sm">
-                    🚧 <strong>Coming Soon:</strong> Stripe payment integration will be added here
-                  </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-slate-700/30 rounded-lg border border-slate-600">
+                    <span className="text-3xl">💳</span>
+                    <div>
+                      <p className="text-white font-semibold">Kreditkarte / Debitkarte</p>
+                      <p className="text-slate-400 text-sm">Visa, Mastercard, American Express</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 p-4 bg-slate-700/30 rounded-lg border border-slate-600">
+                    <span className="text-3xl">🇨🇭</span>
+                    <div>
+                      <p className="text-white font-semibold">TWINT</p>
+                      <p className="text-slate-400 text-sm">Schweizer Mobile Payment</p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <span className="text-slate-300">Powered by</span>
-                  <div className="bg-white rounded px-3 py-1 text-purple-600 font-bold">
+                <div className="flex items-center gap-4 mt-6">
+                  <span className="text-slate-300 text-sm">Sichere Zahlung durch</span>
+                  <div className="bg-white rounded px-3 py-1 text-purple-600 font-bold text-sm">
                     Stripe
                   </div>
                 </div>
@@ -147,7 +202,7 @@ export default function CheckoutPage() {
                     className="mt-1 w-5 h-5 rounded border-slate-600"
                   />
                   <span className="text-slate-300 text-sm">
-                    I accept the <a href="/terms" className="text-blue-400 hover:underline">Terms & Conditions</a> and <a href="/privacy" className="text-blue-400 hover:underline">Privacy Policy</a>. I understand that gift codes are non-refundable once delivered.
+                    Ich akzeptiere die <a href="/agb" className="text-blue-400 hover:underline">AGB</a> und die <a href="/datenschutz" className="text-blue-400 hover:underline">Datenschutzerklärung</a>. Ich verstehe, dass digitale Guthabenkarten nach der Lieferung nicht erstattet werden können.
                   </span>
                 </label>
                 {errors.acceptTerms && (
@@ -158,9 +213,20 @@ export default function CheckoutPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold text-lg transition-all"
+                disabled={loading}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3"
               >
-                Place Order - {t.common.currency} {totalPrice.toFixed(2)} →
+                {loading ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Wird weitergeleitet...
+                  </>
+                ) : (
+                  <>Zur Zahlung – CHF {totalPrice.toFixed(2)} →</>
+                )}
               </button>
             </form>
           </div>
@@ -168,7 +234,7 @@ export default function CheckoutPage() {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700 sticky top-24">
-              <h2 className="text-2xl font-bold text-white mb-6">Order Summary</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">Bestellübersicht</h2>
 
               <div className="space-y-4 mb-6">
                 {items.map((item) => (
@@ -179,11 +245,11 @@ export default function CheckoutPage() {
                     <div>
                       <div className="text-white font-semibold">{item.productName}</div>
                       <div className="text-slate-400">
-                        {t.common.currency} {item.denomination} × {item.quantity}
+                        CHF {item.denomination.toFixed(0)} × {item.quantity}
                       </div>
                     </div>
                     <div className="text-white font-semibold">
-                      {t.common.currency} {(item.denomination * item.quantity).toFixed(2)}
+                      CHF {(item.denomination * item.quantity).toFixed(2)}
                     </div>
                   </div>
                 ))}
@@ -191,17 +257,17 @@ export default function CheckoutPage() {
 
               <div className="border-t border-slate-700 pt-4 space-y-2">
                 <div className="flex justify-between text-slate-300">
-                  <span>Subtotal:</span>
-                  <span>{t.common.currency} {totalPrice.toFixed(2)}</span>
+                  <span>Zwischensumme:</span>
+                  <span>CHF {totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-slate-300">
-                  <span>Processing:</span>
-                  <span className="text-green-400">FREE</span>
+                  <span>Bearbeitungsgebühr:</span>
+                  <span className="text-green-400">KOSTENLOS</span>
                 </div>
                 <div className="border-t border-slate-700 pt-3 flex justify-between">
                   <span className="text-xl font-bold text-white">Total:</span>
                   <span className="text-2xl font-bold text-white">
-                    {t.common.currency} {totalPrice.toFixed(2)}
+                    CHF {totalPrice.toFixed(2)}
                   </span>
                 </div>
               </div>
@@ -211,15 +277,15 @@ export default function CheckoutPage() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">⚡</span>
-                    <span className="text-sm text-slate-300">Delivery in 30-60 seconds</span>
+                    <span className="text-sm text-slate-300">Lieferung in 30-60 Sekunden</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🔒</span>
-                    <span className="text-sm text-slate-300">Secure payment with Stripe</span>
+                    <span className="text-sm text-slate-300">Sichere Zahlung mit Stripe</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">✓</span>
-                    <span className="text-sm text-slate-300">100% valid codes guaranteed</span>
+                    <span className="text-sm text-slate-300">100% gültige Codes garantiert</span>
                   </div>
                 </div>
               </div>
