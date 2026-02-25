@@ -5,6 +5,7 @@ import products from '@/data/products.json';
 import TopBar from '@/components/TopBar';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useSiteConfig } from '@/lib/config';
+import { getDomainSpecificContent } from '@/lib/i18n';
 
 // Brand images - using Wikipedia thumbnails for reliability
 const brandImages: Record<string, string> = {
@@ -23,6 +24,7 @@ const brandImages: Record<string, string> = {
 export default function HomePage() {
   const { language, t } = useLanguage();
   const site = useSiteConfig();
+  const domainContent = getDomainSpecificContent(site.domain, language);
   const featured = products.filter(p => p.tags.includes('beliebt')).slice(0, 4);
 
   const getProductDescription = (product: typeof products[0]) => {
@@ -164,23 +166,23 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
             <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">⚡</div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.instantTitle}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{domainContent.features.instantTitle}</h3>
             <p className="text-slate-400 text-xs sm:text-sm">
-              {t.features.instantDesc}
+              {domainContent.features.instantDesc}
             </p>
           </div>
           <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
-            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🇨🇭</div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.swissMadeTitle}</h3>
+            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">{domainContent.features.flag}</div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{domainContent.features.localTitle}</h3>
             <p className="text-slate-400 text-xs sm:text-sm">
-              {t.features.swissMadeDesc}
+              {domainContent.features.localDesc}
             </p>
           </div>
           <div className="bg-slate-800/50 backdrop-blur rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-slate-700 text-center">
             <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🔒</div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{t.features.secureTitle}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{domainContent.features.secureTitle}</h3>
             <p className="text-slate-400 text-xs sm:text-sm">
-              {t.features.secureDesc}
+              {domainContent.features.secureDesc}
             </p>
           </div>
         </div>
@@ -193,7 +195,7 @@ export default function HomePage() {
             <div className="col-span-2 sm:col-span-1">
               <h4 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">{site.name}</h4>
               <p className="text-slate-400 text-xs sm:text-sm">
-                {t.footer.tagline}
+                {domainContent.tagline}
               </p>
             </div>
             <div>

@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { useLanguage } from '@/lib/LanguageContext';
+import { useSiteConfig } from '@/lib/config';
+import { getDomainSpecificContent } from '@/lib/i18n';
 
 // Brand images - using Wikipedia thumbnails for reliability
 const brandImages: Record<string, string> = {
@@ -83,6 +85,8 @@ interface Product {
 
 export default function ProductDetail({ product }: { product: Product }) {
   const { language, t } = useLanguage();
+  const site = useSiteConfig();
+  const domainContent = getDomainSpecificContent(site.domain, language);
   const info = productInfo[language]?.[product.id] || productInfo['de'][product.id];
   
   const getDescription = () => {
@@ -151,8 +155,8 @@ export default function ProductDetail({ product }: { product: Product }) {
             <div className="bg-slate-800/50 backdrop-blur rounded-xl p-4 sm:p-6 border border-slate-700">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div>
-                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">{product.price.toFixed(2)}</span>
-                  <span className="text-lg sm:text-xl lg:text-2xl ml-1 sm:ml-2">{t.common.currency}</span>
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">{site.currency === 'EUR' ? '€' : ''}{product.price.toFixed(2)}</span>
+                  <span className="text-lg sm:text-xl lg:text-2xl ml-1 sm:ml-2">{site.currency}</span>
                 </div>
                 {product.inStock && (
                   <span className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1 sm:py-2 bg-green-500/20 text-green-300 rounded-lg border border-green-500/30 text-xs sm:text-sm">
@@ -167,7 +171,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   id: product.id,
                   name: product.name,
                   price: product.price,
-                  currency: 'CHF',
+                  currency: site.currency,
                   image: '',
                   brand: product.brand,
                 }} 
@@ -219,7 +223,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <span>{t.product.paymentMethods}</span>
+                <span>{domainContent.paymentMethods}</span>
               </div>
             </div>
 

@@ -1,7 +1,9 @@
 // Multi-language support for Swiss Gamer Cards
 // Languages: German (DE), French (FR), Italian (IT), English (EN)
+// Supports domain-specific content (guthabenkarten.ch vs sofortvoucher.de)
 
 export type Language = 'de' | 'fr' | 'it' | 'en';
+export type SiteDomain = 'guthabenkarten.ch' | 'sofortvoucher.de';
 
 export interface Translations {
   common: {
@@ -302,4 +304,117 @@ export const translations: Record<Language, Translations> = {
 
 export function getTranslations(lang: Language): Translations {
   return translations[lang] || translations.de;
+}
+
+// Domain-specific overrides for German market
+export function getDomainSpecificContent(domain: string, lang: Language = 'de') {
+  const isGermanSite = domain.includes('sofortvoucher.de');
+  
+  if (isGermanSite && lang === 'de') {
+    return {
+      features: {
+        instantTitle: 'Sofortlieferung',
+        instantDesc: 'Code per E-Mail in 30-60 Sekunden. Kein Warten.',
+        localTitle: 'Made in Germany',
+        localDesc: 'EUR Preise, deutsche Zahlungsmethoden, keine Umrechnungsgebühren.',
+        secureTitle: '100% Sicher',
+        secureDesc: 'Sichere Zahlung, geprüfte Codes, Geld-zurück-Garantie.',
+        flag: '🇩🇪',
+      },
+      paymentMethods: 'Zahlung: Kreditkarte, PayPal, SOFORT, Giropay',
+      tagline: 'Ihr deutscher Online-Shop für Gaming Guthabenkarten. Sofortlieferung, sicher und einfach.',
+    };
+  }
+  
+  // Swiss site (default)
+  return {
+    features: {
+      instantTitle: 'Sofortlieferung',
+      instantDesc: 'Code per E-Mail in 30-60 Sekunden. Kein Warten.',
+      localTitle: 'Swiss Made',
+      localDesc: 'CHF Preise, Schweizer Zahlungsmethoden, keine Umrechnungsgebühren.',
+      secureTitle: '100% Sicher',
+      secureDesc: 'Sichere Zahlung, geprüfte Codes, Geld-zurück-Garantie.',
+      flag: '🇨🇭',
+    },
+      paymentMethods: 'Zahlung: Kreditkarte, TWINT, PayPal',
+      tagline: 'Ihr Schweizer Online-Shop für Gaming Guthabenkarten. Sofortlieferung, sicher und einfach.',
+    },
+    // English versions
+    en: {
+      features: {
+        instantTitle: 'Instant Delivery',
+        instantDesc: 'Code via email in 30-60 seconds. No waiting.',
+        localTitle: 'Swiss Made',
+        localDesc: 'CHF prices, Swiss payment methods, no conversion fees.',
+        secureTitle: '100% Secure',
+        secureDesc: 'Secure payment, verified codes, money-back guarantee.',
+        flag: '🇨🇭',
+      },
+      paymentMethods: 'Payment: Credit card, TWINT, PayPal',
+      tagline: 'Your Swiss online shop for gaming gift cards. Instant delivery, secure and easy.',
+    },
+  };
+  
+  // German site translations (sofortvoucher.de)
+  if (isGermanSite) {
+    return {
+      de: {
+        features: {
+          instantTitle: 'Sofortlieferung',
+          instantDesc: 'Code per E-Mail in 30-60 Sekunden. Kein Warten.',
+          localTitle: 'Made in Germany',
+          localDesc: 'EUR Preise, deutsche Zahlungsmethoden, keine Umrechnungsgebühren.',
+          secureTitle: '100% Sicher',
+          secureDesc: 'Sichere Zahlung, geprüfte Codes, Geld-zurück-Garantie.',
+          flag: '🇩🇪',
+        },
+        paymentMethods: 'Zahlung: Kreditkarte, PayPal, SOFORT, Giropay',
+        tagline: 'Ihr deutscher Online-Shop für Gaming Guthabenkarten. Sofortlieferung, sicher und einfach.',
+      },
+      en: {
+        features: {
+          instantTitle: 'Instant Delivery',
+          instantDesc: 'Code via email in 30-60 seconds. No waiting.',
+          localTitle: 'Made in Germany',
+          localDesc: 'EUR prices, German payment methods, no conversion fees.',
+          secureTitle: '100% Secure',
+          secureDesc: 'Secure payment, verified codes, money-back guarantee.',
+          flag: '🇩🇪',
+        },
+        paymentMethods: 'Payment: Credit card, PayPal, SOFORT, Giropay',
+        tagline: 'Your German online shop for gaming gift cards. Instant delivery, secure and easy.',
+      },
+    };
+  }
+  
+  // Swiss site (default)
+  return {
+    de: {
+      features: {
+        instantTitle: 'Sofortlieferung',
+        instantDesc: 'Code per E-Mail in 30-60 Sekunden. Kein Warten.',
+        localTitle: 'Swiss Made',
+        localDesc: 'CHF Preise, Schweizer Zahlungsmethoden, keine Umrechnungsgebühren.',
+        secureTitle: '100% Sicher',
+        secureDesc: 'Sichere Zahlung, geprüfte Codes, Geld-zurück-Garantie.',
+        flag: '🇨🇭',
+      },
+      paymentMethods: 'Zahlung: Kreditkarte, TWINT, PayPal',
+      tagline: 'Ihr Schweizer Online-Shop für Gaming Guthabenkarten. Sofortlieferung, sicher und einfach.',
+    },
+    en: {
+      features: {
+        instantTitle: 'Instant Delivery',
+        instantDesc: 'Code via email in 30-60 seconds. No waiting.',
+        localTitle: 'Swiss Made',
+        localDesc: 'CHF prices, Swiss payment methods, no conversion fees.',
+        secureTitle: '100% Secure',
+        secureDesc: 'Secure payment, verified codes, money-back guarantee.',
+        flag: '🇨🇭',
+      },
+      paymentMethods: 'Payment: Credit card, TWINT, PayPal',
+      tagline: 'Your Swiss online shop for gaming gift cards. Instant delivery, secure and easy.',
+    },
+  };
 }

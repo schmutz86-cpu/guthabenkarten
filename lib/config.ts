@@ -13,6 +13,9 @@ export type SiteConfig = {
     address: string;
     country: string;
   };
+  paymentMethods?: string[];
+  flag?: string;
+  tagline?: string;
 };
 
 export const sites: Record<string, SiteConfig> = {
@@ -28,6 +31,9 @@ export const sites: Record<string, SiteConfig> = {
       address: '5303 Würenlos, Schweiz',
       country: 'Schweiz',
     },
+    paymentMethods: ['Kreditkarte', 'TWINT', 'PayPal'],
+    flag: '🇨🇭',
+    tagline: 'Ihr Schweizer Online-Shop für Gaming Guthabenkarten',
   },
   'sofortvoucher.de': {
     domain: 'sofortvoucher.de',
@@ -41,6 +47,9 @@ export const sites: Record<string, SiteConfig> = {
       address: 'Deutschland',
       country: 'Deutschland',
     },
+    paymentMethods: ['Kreditkarte', 'PayPal', 'SOFORT', 'Giropay'],
+    flag: '🇩🇪',
+    tagline: 'Ihr deutscher Online-Shop für Gaming Guthabenkarten',
   },
 };
 
