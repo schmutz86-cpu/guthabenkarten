@@ -38,7 +38,7 @@ export default function ImpressumPage() {
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
             <h2 className="text-xl font-semibold text-white mb-4">Markenzeichen</h2>
             <p className="mb-2">Alle auf dieser Website genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer.</p>
-            <p class="text-sm text-slate-400 mt-3">
+            <p className="text-sm text-slate-400 mt-3">
               Steam, PlayStation, Xbox, Nintendo, Netflix, Spotify, Apple, Google Play, Roblox und Amazon sind eingetragene Marken ihrer jeweiligen Eigentümer. Guthabenkarten.ch ist nicht mit diesen Unternehmen verbunden.
             </p>
           </section>
