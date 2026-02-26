@@ -87,18 +87,24 @@ function getConfig(): ReloadlyConfig {
   const isProduction = process.env.RELOADLY_ENV === 'production';
   
   if (isProduction) {
+    if (!process.env.RELOADLY_CLIENT_ID || !process.env.RELOADLY_CLIENT_SECRET) {
+      throw new Error('RELOADLY_CLIENT_ID and RELOADLY_CLIENT_SECRET must be set for production');
+    }
     return {
-      clientId: process.env.RELOADLY_CLIENT_ID!,
-      clientSecret: process.env.RELOADLY_CLIENT_SECRET!,
+      clientId: process.env.RELOADLY_CLIENT_ID,
+      clientSecret: process.env.RELOADLY_CLIENT_SECRET,
       audience: 'https://giftcards.reloadly.com',
       baseUrl: 'https://giftcards.reloadly.com',
     };
   }
   
   // Sandbox
+  if (!process.env.RELOADLY_SANDBOX_CLIENT_ID || !process.env.RELOADLY_SANDBOX_CLIENT_SECRET) {
+    throw new Error('RELOADLY_SANDBOX_CLIENT_ID and RELOADLY_SANDBOX_CLIENT_SECRET must be set');
+  }
   return {
-    clientId: process.env.RELOADLY_SANDBOX_CLIENT_ID || 'HNOVxMX8yieImVA1rmDXfm1c8z01mHgV',
-    clientSecret: process.env.RELOADLY_SANDBOX_CLIENT_SECRET || '12xCJiSzcd-RrDjpTNla2Y1Tiksqqj-FbD0nEST8DSQqKGr13gSUfKfYsGnKoNn',
+    clientId: process.env.RELOADLY_SANDBOX_CLIENT_ID,
+    clientSecret: process.env.RELOADLY_SANDBOX_CLIENT_SECRET,
     audience: 'https://giftcards-sandbox.reloadly.com',
     baseUrl: 'https://giftcards-sandbox.reloadly.com',
   };

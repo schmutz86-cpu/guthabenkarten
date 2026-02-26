@@ -1,13 +1,17 @@
 import nodemailer from 'nodemailer';
 import { ReloadlyOrder } from './reloadly';
 
+if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+  console.warn('⚠️ SMTP credentials not configured - email sending will fail');
+}
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'asmtp.mail.hostpoint.ch',
   port: parseInt(process.env.SMTP_PORT || '587'),
   secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.SMTP_USER || 'info@guthabenkarten.ch',
-    pass: process.env.SMTP_PASS || 'Lucyhasmypassword',
+    pass: process.env.SMTP_PASS, // No fallback - must be set
   },
   tls: {
     rejectUnauthorized: false
