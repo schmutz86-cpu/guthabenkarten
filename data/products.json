@@ -8,10 +8,10 @@
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Steam Guthaben CHF 50 – Kaufe tausende PC-Spiele, Indie-Games, DLCs und Software im grössten Gaming-Store der Welt. Einlösbar für Steam, Counter-Strike, Dota 2, und über 50'000 Titel.",
-      "fr": "Crédit Steam CHF 50 – Livraison instantanée par e-mail. Utilisable dans le Steam Store pour des jeux, DLC et plus encore.",
-      "it": "Credito Steam CHF 50 – Consegna immediata via e-mail. Riscattabile nello Steam Store per giochi, DLC e altro.",
-      "en": "Steam Credit CHF 50 – Instant delivery via email. Redeemable in the Steam Store for games, DLCs and more."
+      "de": "Steam Guthaben CHF 50 – Dein Zugang zu über 70'000 Spielen. Kaufe AAA-Titel, Indie-Games, DLCs und In-Game-Items im weltweit grössten Gaming-Store. Perfekt für Steam Sales – schütze deine Privatsphäre mit Prepaid-Guthaben statt Kreditkarte. Code kommt in 60 Sekunden per E-Mail.",
+      "fr": "Crédit Steam CHF 50 – Accédez à plus de 70 000 jeux. Achetez des titres AAA, des jeux indés, des DLC et des objets en jeu. Livraison instantanée par e-mail. Protection de la vie privée avec le crédit prépayé.",
+      "it": "Credito Steam CHF 50 – Accesso a oltre 70'000 giochi. Acquista titoli AAA, indie, DLC e oggetti in-game. Consegna immediata via e-mail. Protezione della privacy con credito prepagato.",
+      "en": "Steam Credit CHF 50 – Access over 70,000 games. Buy AAA titles, indie games, DLCs and in-game items. Instant email delivery. Protect your privacy with prepaid credit instead of credit card."
     },
     "image": "/images/products/steam-card.jpg",
     "inStock": true,
@@ -28,10 +28,10 @@
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "PlayStation Store Guthaben CHF 50 – Für PS5, PS4 und PS3. Sofortiger Download per E-Mail.",
-      "fr": "Crédit PlayStation Store CHF 50 – Pour PS5, PS4 et PS3. Téléchargement instantané par e-mail.",
-      "it": "Credito PlayStation Store CHF 50 – Per PS5, PS4 e PS3. Download immediato via e-mail.",
-      "en": "PlayStation Store Credit CHF 50 – For PS5, PS4 and PS3. Instant download via email."
+      "de": "PlayStation Store Guthaben CHF 50 – Lade deine PS5, PS4 oder PS3 auf. Kaufe die neusten Blockbuster, Indie-Hits, Season Passes und exklusive DLCs direkt im PlayStation Store. Code sofort per E-Mail – ohne Kreditkarte, sicher und diskret.",
+      "fr": "Crédit PlayStation Store CHF 50 – Rechargez votre PS5, PS4 ou PS3. Achetez les derniers jeux, Season Passes et DLC exclusifs. Code instantané par e-mail – sans carte de crédit, sécurisé.",
+      "it": "Credito PlayStation Store CHF 50 – Ricarica PS5, PS4 o PS3. Acquista gli ultimi giochi, Season Pass e DLC esclusivi. Codice immediato via e-mail – sicuro, senza carta di credito.",
+      "en": "PlayStation Store Credit CHF 50 – Top up your PS5, PS4 or PS3. Buy the latest blockbusters, indie hits, season passes and exclusive DLCs. Instant email code – no credit card needed, secure and private."
     },
     "image": "/images/products/playstation-card.jpg",
     "inStock": true,
