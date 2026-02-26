@@ -98,7 +98,7 @@ export const translations: Record<Language, Translations> = {
     },
     home: {
       hero: '🎮 Guthabenkarten.ch',
-      heroSubtitle: 'Gaming, Streaming & Shopping Cards – Sofort per E-Mail – 100% Sicher',
+      heroSubtitle: 'Gaming, Streaming & Shopping Cards: Sofort per E-Mail. 100% Sicher.',
       featuredProducts: 'Beliebteste Cards',
       allProducts: 'Alle Guthabenkarten',
     },
@@ -157,7 +157,7 @@ export const translations: Record<Language, Translations> = {
     },
     home: {
       hero: '🎮 Guthabenkarten.ch',
-      heroSubtitle: 'Gaming, Streaming & Shopping Cards – Instant Email Delivery – 100% Secure',
+      heroSubtitle: 'Gaming, Streaming & Shopping Cards: Instant Email Delivery. 100% Secure.',
       featuredProducts: 'Popular Cards',
       allProducts: 'All Gift Cards',
     },
@@ -216,7 +216,7 @@ export const translations: Record<Language, Translations> = {
     },
     home: {
       hero: '🎮 Guthabenkarten.ch',
-      heroSubtitle: 'Cartes Gaming, Streaming & Shopping – Livraison instantanée – 100% Sécurisé',
+      heroSubtitle: 'Cartes Gaming, Streaming & Shopping: Livraison instantanée. 100% Sécurisé.',
       featuredProducts: 'Cartes Populaires',
       allProducts: 'Toutes les Cartes Cadeaux',
     },
@@ -275,7 +275,7 @@ export const translations: Record<Language, Translations> = {
     },
     home: {
       hero: '🎮 Guthabenkarten.ch',
-      heroSubtitle: 'Carte Gaming, Streaming & Shopping – Consegna immediata – 100% Sicuro',
+      heroSubtitle: 'Carte Gaming, Streaming & Shopping: Consegna immediata. 100% Sicuro.',
       featuredProducts: 'Carte Popolari',
       allProducts: 'Tutte le Gift Card',
     },
