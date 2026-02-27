@@ -101,12 +101,12 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  <Link
+                  <a
                     href="/kasse"
                     className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-xl transition-all"
                   >
                     Zur Kasse
-                  </Link>
+                  </a>
 
                   <Link href="/" className="block text-center text-blue-400 hover:text-blue-300 text-sm mt-4">
                     ← Weiter einkaufen
