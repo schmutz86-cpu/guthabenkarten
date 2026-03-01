@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import products from '@/data/products.json';
 import TopBar from '@/components/TopBar';
+import Footer from '@/components/Footer';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useSiteConfig } from '@/lib/config';
 import { getDomainSpecificContent } from '@/lib/i18n';
@@ -185,36 +186,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 border-t border-slate-800 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
-            <div className="col-span-2 sm:col-span-1">
-              <h4 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">{site.name}</h4>
-              <p className="text-slate-400 text-xs sm:text-sm">
-                {domainContent.tagline}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-bold text-xs sm:text-sm mb-2 sm:mb-3">{t.footer.support}</h4>
-              <ul className="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
-                <li><Link href="/faq" className="hover:text-white">{t.footer.faq}</Link></li>
-                <li><Link href="/kontakt" className="hover:text-white">{t.footer.contact}</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-bold text-xs sm:text-sm mb-2 sm:mb-3">{t.footer.legal}</h4>
-              <ul className="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
-                <li><Link href="/impressum" className="hover:text-white">Impressum</Link></li>
-                <li><Link href="/agb" className="hover:text-white">{t.footer.terms}</Link></li>
-                <li><Link href="/datenschutz" className="hover:text-white">{t.footer.privacy}</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-800 pt-4 sm:pt-6 text-center text-slate-500 text-xs">
-            {t.footer.copyright}
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
