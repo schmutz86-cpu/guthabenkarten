@@ -48,10 +48,10 @@
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Xbox Live Guthaben CHF 50 – Für Xbox Series X|S, Xbox One und Windows. Sofortige Lieferung.",
-      "fr": "Crédit Xbox Live CHF 50 – Pour Xbox Series X|S, Xbox One et Windows. Livraison instantanée.",
-      "it": "Credito Xbox Live CHF 50 – Per Xbox Series X|S, Xbox One e Windows. Consegna immediata.",
-      "en": "Xbox Live Credit CHF 50 – For Xbox Series X|S, Xbox One and Windows. Instant delivery."
+      "de": "Xbox Guthaben CHF 50 – Dein Zugang zur Xbox-Welt. Kaufe die neusten Blockbuster wie Call of Duty, EA Sports FC oder indische Highlights im Microsoft Store. Funktioniert auf Xbox Series X|S, Xbox One und Windows PC – ein Konto, überall spielbar. Greife auf Xbox Game Pass-Titel, DLCs, Filme und Apps zu. Code sofort per E-Mail – ohne Kreditkarte, sicher und bequem.",
+      "fr": "Crédit Xbox CHF 50 – Votre accès au monde Xbox. Achetez les derniers blockbusters comme Call of Duty, EA Sports FC ou des succès indépendants sur le Microsoft Store. Fonctionne sur Xbox Series X|S, Xbox One et PC Windows – un compte, jouez partout. Accédez aux titres Xbox Game Pass, DLC, films et applications. Code instantané par e-mail – sans carte de crédit, sûr et pratique.",
+      "it": "Credito Xbox CHF 50 – Il tuo accesso al mondo Xbox. Acquista gli ultimi blockbusters come Call of Duty, EA Sports FC o successi indie sul Microsoft Store. Funziona su Xbox Series X|S, Xbox One e PC Windows – un account, gioca ovunque. Accedi ai titoli Xbox Game Pass, DLC, film e app. Codice immediato via e-mail – senza carta di credito, sicuro e comodo.",
+      "en": "Xbox Credit CHF 50 – Your gateway to the Xbox world. Buy the latest blockbusters like Call of Duty, EA Sports FC or indie hits on the Microsoft Store. Works on Xbox Series X|S, Xbox One and Windows PC – one account, play everywhere. Access Xbox Game Pass titles, DLCs, movies and apps. Instant code via email – no credit card needed, safe and convenient."
     },
     "image": "/images/products/xbox-card.jpg",
     "inStock": true,
@@ -68,10 +68,10 @@
     "margin": 0.06,
     "currency": "CHF",
     "description": {
-      "de": "Netflix Geschenkkarte CHF 30 – Perfekt zum Verschenken. Einlösbar für Netflix-Abos in der Schweiz.",
-      "fr": "Carte cadeau Netflix CHF 30 – Parfait pour offrir. Utilisable pour les abonnements Netflix en Suisse.",
-      "it": "Carta regalo Netflix CHF 30 – Perfetto per regalare. Riscattabile per abbonamenti Netflix in Svizzera.",
-      "en": "Netflix Gift Card CHF 30 – Perfect for gifting. Redeemable for Netflix subscriptions in Switzerland."
+      "de": "Netflix Geschenkkarte CHF 30 – Streaming-Vergnügen für alle. Löse den Code ein und geniesse tausende Serien und Filme sofort auf jedem Gerät. Perfekt zum Verschenken oder für dich selbst – bestehende Mitglieder zahlen damit ihr Abo, Neukunden starten sofort durch. Code kommt in 60 Sekunden per E-Mail. Nur für Schweizer Netflix-Konten einlösbar (ab 18 Jahren).",
+      "fr": "Carte cadeau Netflix CHF 30 – Plaisir de streaming pour tous. Échangez le code et profitez instantanément de milliers de séries et films sur tous les appareils. Parfait pour offrir ou pour vous-même – les membres existants paient leur abonnement, les nouveaux clients commencent immédiatement. Code en 60 secondes par e-mail. Uniquement échangeable sur les comptes Netflix suisses (18+).",
+      "it": "Carta regalo Netflix CHF 30 – Piacere dello streaming per tutti. Riscatta il codice e goditi migliaia di serie e film istantaneamente su qualsiasi dispositivo. Perfetto per regalare o per te stesso – i membri esistenti pagano l'abbonamento, i nuovi clienti iniziano subito. Codice in 60 secondi via e-mail. Riscattabile solo su account Netflix svizzeri (18+).",
+      "en": "Netflix Gift Card CHF 30 – Streaming enjoyment for everyone. Redeem the code and instantly enjoy thousands of series and films on any device. Perfect for gifting or yourself – existing members use it to pay their subscription, new customers start right away. Code delivered in 60 seconds via email. Only redeemable on Swiss Netflix accounts (18+)."
     },
     "image": "/images/products/netflix-card.jpg",
     "inStock": true,
