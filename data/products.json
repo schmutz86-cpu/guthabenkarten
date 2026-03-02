@@ -168,10 +168,10 @@
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Nintendo eShop Guthaben CHF 50 – Für Nintendo Switch Spiele und DLCs. Sofortige Lieferung.",
-      "fr": "Crédit Nintendo eShop CHF 50 – Pour les jeux et DLC Nintendo Switch. Livraison instantanée.",
-      "it": "Credito Nintendo eShop CHF 50 – Per giochi e DLC Nintendo Switch. Consegna immediata.",
-      "en": "Nintendo eShop Credit CHF 50 – For Nintendo Switch games and DLCs. Instant delivery."
+      "de": "Nintendo eShop Guthaben CHF 50 – Entdecke die Welt von Nintendo. Kaufe die neusten Hits wie Zelda, Mario, Pokémon und Animal Crossing direkt im eShop. Zugriff auf exklusive Indie-Titel, Season Passes und DLC-Erweiterungen. Perfekt für Nintendo Switch, Switch Lite und Switch OLED – dein Guthaben, deine Spiele. Code sofort per E-Mail – ohne Kreditkarte, sicher und kinderleicht.",
+      "fr": "Crédit Nintendo eShop CHF 50 – Découvrez le monde Nintendo. Achetez les derniers hits comme Zelda, Mario, Pokémon et Animal Crossing directement sur l'eShop. Accédez à des titres indépendants exclusifs, Season Passes et extensions DLC. Parfait pour Nintendo Switch, Switch Lite et Switch OLED – votre crédit, vos jeux. Code instantané par e-mail – sans carte de crédit, sûr et facile.",
+      "it": "Credito Nintendo eShop CHF 50 – Scopri il mondo Nintendo. Acquista gli ultimi successi come Zelda, Mario, Pokémon e Animal Crossing direttamente sull'eShop. Accesso a titoli indie esclusivi, Season Pass ed espansioni DLC. Perfetto per Nintendo Switch, Switch Lite e Switch OLED – il tuo credito, i tuoi giochi. Codice immediato via e-mail – senza carta di credito, sicuro e facile.",
+      "en": "Nintendo eShop Credit CHF 50 – Discover the world of Nintendo. Buy the latest hits like Zelda, Mario, Pokémon and Animal Crossing directly in the eShop. Access exclusive indie titles, Season Passes and DLC expansions. Perfect for Nintendo Switch, Switch Lite and Switch OLED – your credit, your games. Instant code via email – no credit card needed, safe and easy."
     },
     "image": "/images/products/nintendo-card.jpg",
     "inStock": true,
@@ -188,10 +188,10 @@
     "margin": 0.05,
     "currency": "CHF",
     "description": {
-      "de": "Amazon.de Geschenkgutschein CHF 50 – Einlösbar für Millionen von Produkten auf Amazon.de.",
-      "fr": "Bon cadeau Amazon.de CHF 50 – Utilisable pour des millions de produits sur Amazon.de.",
-      "it": "Buono regalo Amazon.de CHF 50 – Riscattabile per milioni di prodotti su Amazon.de.",
-      "en": "Amazon.de Gift Card CHF 50 – Redeemable for millions of products on Amazon.de."
+      "de": "Amazon.de Geschenkgutschein CHF 50 – Das perfekte Geschenk für jeden Anlass. Einlösbar für Millionen von Produkten: Elektronik, Bücher, Kleidung, Haushalt, Spielzeug und vieles mehr. Schnelle Lieferung aus Deutschland, auch in die Schweiz. Ideal zum Geburtstag, zu Weihnachten oder einfach als Dankeschön. Code sofort per E-Mail – flexibel, praktisch, immer willkommen.",
+      "fr": "Bon cadeau Amazon.de CHF 50 – Le cadeau parfait pour toutes les occasions. Échangeable contre des millions de produits : électronique, livres, vêtements, maison, jouets et plus encore. Livraison rapide depuis l'Allemagne, également en Suisse. Idéal pour les anniversaires, Noël ou simplement pour dire merci. Code instantané par e-mail – flexible, pratique, toujours apprécié.",
+      "it": "Buono regalo Amazon.de CHF 50 – Il regalo perfetto per ogni occasione. Riscattabile per milioni di prodotti: elettronica, libri, abbigliamento, casa, giocattoli e molto altro. Consegna rapida dalla Germania, anche in Svizzera. Ideale per compleanni, Natale o semplicemente per dire grazie. Codice immediato via e-mail – flessibile, pratico, sempre gradito.",
+      "en": "Amazon.de Gift Card CHF 50 – The perfect gift for any occasion. Redeemable for millions of products: electronics, books, clothing, household, toys and much more. Fast delivery from Germany, also to Switzerland. Ideal for birthdays, Christmas or just as a thank you. Instant code via email – flexible, practical, always welcome."
     },
     "image": "/images/products/amazon-card.jpg",
     "inStock": true,
