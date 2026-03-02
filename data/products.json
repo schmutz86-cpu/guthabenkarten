@@ -108,10 +108,10 @@
     "margin": 0.07,
     "currency": "CHF",
     "description": {
-      "de": "Apple Guthaben CHF 50 – Für Apps, Spiele, Musik, Filme und iCloud. iPhone und iPad kompatibel.",
-      "fr": "Crédit Apple CHF 50 – Pour les apps, jeux, musique, films et iCloud. Compatible iPhone et iPad.",
-      "it": "Credito Apple CHF 50 – Per app, giochi, musica, film e iCloud. Compatibile con iPhone e iPad.",
-      "en": "Apple Credit CHF 50 – For apps, games, music, movies and iCloud. iPhone and iPad compatible."
+      "de": "Apple Guthaben CHF 50 – Eine Karte, Millionen Möglichkeiten. Lade Apps, Spiele, Musik, Filme, TV-Serien und Hörbücher im App Store und iTunes. Funktioniert auf iPhone, iPad, Mac und Apple TV – und für iCloud+ Speicher. In-App-Käufe und Abos inklusive. Perfekt zum Verschenken oder für prepaid Budget-Kontrolle. Code kommt in 60 Sekunden per E-Mail – sicher, ohne Kreditkarte.",
+      "fr": "Crédit Apple CHF 50 – Une carte, des millions de possibilités. Chargez des apps, jeux, musique, films, séries TV et livres audio sur l'App Store et iTunes. Fonctionne sur iPhone, iPad, Mac et Apple TV – et pour le stockage iCloud+. Achats in-app et abonnements inclus. Parfait pour offrir ou pour un budget prépayé. Code en 60 secondes par e-mail – sûr, sans carte de crédit.",
+      "it": "Credito Apple CHF 50 – Una carta, milioni di possibilità. Carica app, giochi, musica, film, serie TV e audiolibri sull'App Store e iTunes. Funziona su iPhone, iPad, Mac e Apple TV – e per lo spazio iCloud+. Acquisti in-app e abbonamenti inclusi. Perfetto per regalare o per il controllo budget prepagato. Codice in 60 secondi via e-mail – sicuro, senza carta di credito.",
+      "en": "Apple Credit CHF 50 – One card, millions of possibilities. Load apps, games, music, movies, TV shows and audiobooks on the App Store and iTunes. Works on iPhone, iPad, Mac and Apple TV – and for iCloud+ storage. In-app purchases and subscriptions included. Perfect for gifting or prepaid budget control. Code delivered in 60 seconds via email – secure, no credit card needed."
     },
     "image": "/images/products/apple-card.jpg",
     "inStock": true,
@@ -128,10 +128,10 @@
     "margin": 0.07,
     "currency": "CHF",
     "description": {
-      "de": "Google Play Guthaben CHF 50 – Für Android Apps, Spiele, Filme und Bücher. Sofortige Lieferung.",
-      "fr": "Crédit Google Play CHF 50 – Pour les apps Android, jeux, films et livres. Livraison instantanée.",
-      "it": "Credito Google Play CHF 50 – Per app Android, giochi, film e libri. Consegna immediata.",
-      "en": "Google Play Credit CHF 50 – For Android apps, games, movies and books. Instant delivery."
+      "de": "Google Play Guthaben CHF 50 – Ein Code, unbegrenzter Spass. Zugriff auf Millionen von Apps, Spielen, Filmen, Musik, E-Books und Hörbüchern im Google Play Store. Funktioniert auf allen Android-Geräten, Chromebooks und im Webbrowser – deine Inhalte sind überall verfügbar. In-App-Käufe und Abo-Dienste inklusive. Code sofort per E-Mail – ohne Kreditkarte, volle Kostenkontrolle.",
+      "fr": "Crédit Google Play CHF 50 – Un code, plaisir illimité. Accédez à des millions d'apps, jeux, films, musique, ebooks et livres audio sur le Google Play Store. Fonctionne sur tous les appareils Android, Chromebooks et navigateurs web – vos contenus sont disponibles partout. Achats in-app et services d'abonnement inclus. Code instantané par e-mail – sans carte de crédit, contrôle total des coûts.",
+      "it": "Credito Google Play CHF 50 – Un codice, divertimento illimitato. Accesso a milioni di app, giochi, film, musica, ebook e audiolibri sul Google Play Store. Funziona su tutti i dispositivi Android, Chromebook e browser web – i tuoi contenuti sono disponibili ovunque. Acquisti in-app e servizi in abbonamento inclusi. Codice immediato via e-mail – senza carta di credito, controllo totale dei costi.",
+      "en": "Google Play Credit CHF 50 – One code, unlimited fun. Access millions of apps, games, movies, music, ebooks and audiobooks on the Google Play Store. Works on all Android devices, Chromebooks and web browsers – your content is available everywhere. In-app purchases and subscription services included. Instant code via email – no credit card, full cost control."
     },
     "image": "/images/products/google-play-card.jpg",
     "inStock": true,
