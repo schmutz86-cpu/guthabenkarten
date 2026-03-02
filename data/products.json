@@ -88,10 +88,10 @@
     "margin": 0.06,
     "currency": "CHF",
     "description": {
-      "de": "Spotify Premium Guthaben CHF 30 – 3 Monate werbefreies Musik-Streaming. Sofortige Lieferung.",
-      "fr": "Crédit Spotify Premium CHF 30 – 3 mois de streaming musical sans publicité. Livraison instantanée.",
-      "it": "Credito Spotify Premium CHF 30 – 3 mesi di streaming musicale senza pubblicità. Consegna immediata.",
-      "en": "Spotify Premium Credit CHF 30 – 3 months of ad-free music streaming. Instant delivery."
+      "de": "Spotify Premium CHF 30 – Über 100 Millionen Songs ohne Werbung. Höre deine Lieblingsmusik offline, überspringe unbegrenzt und geniesse Premium-Soundqualität. Funktioniert für Neuabos und Bestandskunden – lade dein Abo auf oder starte frisch. Perfekt zum Verschenken oder für prepaid Budget-Kontrolle ohne Abo-Falle. Code sofort per E-Mail.",
+      "fr": "Crédit Spotify Premium CHF 30 – Plus de 100 millions de chansons sans publicité. Écoutez hors ligne, sautez sans limite et profitez de la qualité sonore Premium. Fonctionne pour les nouveaux et anciens abonnés. Parfait pour offrir ou pour un budget prépayé sans engagement. Code instantané par e-mail.",
+      "it": "Credito Spotify Premium CHF 30 – Oltre 100 milioni di brani senza pubblicità. Ascolta offline, salta illimitatamente e goditi la qualità audio Premium. Funziona per nuovi e vecchi abbonati. Perfetto per regalare o per il controllo budget prepagato. Codice immediato via e-mail.",
+      "en": "Spotify Premium CHF 30 – Over 100 million songs ad-free. Listen offline, skip unlimited and enjoy Premium audio quality. Works for new and existing subscribers. Perfect for gifting or prepaid budget control. Instant code via email."
     },
     "image": "/images/products/spotify-card.jpg",
     "inStock": true,
@@ -148,10 +148,10 @@
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Roblox Guthaben CHF 25 – Kaufe Robux und Premium-Abos. Perfekt für junge Gamer.",
-      "fr": "Crédit Roblox CHF 25 – Achetez des Robux et des abonnements Premium. Parfait pour les jeunes joueurs.",
-      "it": "Credito Roblox CHF 25 – Acquista Robux e abbonamenti Premium. Perfetto per giovani gamer.",
-      "en": "Roblox Credit CHF 25 – Buy Robux and Premium subscriptions. Perfect for young gamers."
+      "de": "Roblox Guthaben CHF 25 – Tauche ein in Millionen von Spieler-Erlebnissen. Kaufe Robux für Skins, Accessoires und Spiel-Upgrades – oder aktiviere Roblox Premium für exklusive Vorteile. Das ideale Geschenk für junge Gamer zwischen 8 und 16 Jahren. Keine Kreditkarte nötig, volle Kostenkontrolle. Code kommt in 60 Sekunden per E-Mail.",
+      "fr": "Crédit Roblox CHF 25 – Plongez dans des millions d'expériences de jeu. Achetez des Robux pour des skins, accessoires et améliorations – ou activez Roblox Premium. Le cadeau idéal pour les jeunes joueurs de 8 à 16 ans. Sans carte de crédit, contrôle total des coûts. Code en 60 secondes par e-mail.",
+      "it": "Credito Roblox CHF 25 – Immergiti in milioni di esperienze di gioco. Acquista Robux per skin, accessori e upgrade – o attiva Roblox Premium. Il regalo ideale per giovani gamer dagl 8 ai 16 anni. Nessuna carta di credito, controllo totale dei costi. Codice in 60 secondi via e-mail.",
+      "en": "Roblox Credit CHF 25 – Dive into millions of player experiences. Buy Robux for skins, accessories and game upgrades – or activate Roblox Premium for exclusive perks. The perfect gift for young gamers aged 8-16. No credit card needed, full cost control. Code delivered in 60 seconds via email."
     },
     "image": "/images/products/roblox-card.jpg",
     "inStock": true,
