@@ -1,17 +1,17 @@
 [
   {
-    "id": "steam-50",
-    "name": "Steam Guthaben CHF 50",
+    "id": "steam",
+    "name": "Steam Guthaben",
     "category": "gaming",
     "brand": "Steam",
-    "price": 50.00,
+    "denominations": [20, 50, 100],
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Steam Guthaben CHF 50 – Dein Zugang zu über 70'000 Spielen. Kaufe AAA-Titel, Indie-Games, DLCs und In-Game-Items im weltweit grössten Gaming-Store. Perfekt für Steam Sales – schütze deine Privatsphäre mit Prepaid-Guthaben statt Kreditkarte. Code kommt in 60 Sekunden per E-Mail.",
-      "fr": "Crédit Steam CHF 50 – Accédez à plus de 70 000 jeux. Achetez des titres AAA, des jeux indés, des DLC et des objets en jeu. Livraison instantanée par e-mail. Protection de la vie privée avec le crédit prépayé.",
-      "it": "Credito Steam CHF 50 – Accesso a oltre 70'000 giochi. Acquista titoli AAA, indie, DLC e oggetti in-game. Consegna immediata via e-mail. Protezione della privacy con credito prepagato.",
-      "en": "Steam Credit CHF 50 – Access over 70,000 games. Buy AAA titles, indie games, DLCs and in-game items. Instant email delivery. Protect your privacy with prepaid credit instead of credit card."
+      "de": "Steam Guthaben – Dein Zugang zu über 70'000 Spielen. Kaufe AAA-Titel, Indie-Games, DLCs und In-Game-Items im weltweit grössten Gaming-Store. Perfekt für Steam Sales – schütze deine Privatsphäre mit Prepaid-Guthaben statt Kreditkarte. Code kommt in 60 Sekunden per E-Mail.",
+      "fr": "Crédit Steam – Accédez à plus de 70 000 jeux. Achetez des titres AAA, des jeux indés, des DLC et des objets en jeu. Livraison instantanée par e-mail. Protection de la vie privée avec le crédit prépayé.",
+      "it": "Credito Steam – Accesso a oltre 70'000 giochi. Acquista titoli AAA, indie, DLC e oggetti in-game. Consegna immediata via e-mail. Protezione della privacy con credito prepagato.",
+      "en": "Steam Credit – Access over 70,000 games. Buy AAA titles, indie games, DLCs and in-game items. Instant email delivery. Protect your privacy with prepaid credit instead of credit card."
     },
     "image": "/images/products/steam-card.jpg",
     "inStock": true,
@@ -20,18 +20,18 @@
     "tags": ["gaming", "steam", "pc", "beliebt"]
   },
   {
-    "id": "playstation-50",
-    "name": "PlayStation Store CHF 50",
+    "id": "playstation",
+    "name": "PlayStation Store",
     "category": "gaming",
     "brand": "PlayStation",
-    "price": 50.00,
+    "denominations": [20, 50],
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "PlayStation Store Guthaben CHF 50 – Lade deine PS5, PS4 oder PS3 auf. Kaufe die neusten Blockbuster, Indie-Hits, Season Passes und exklusive DLCs direkt im PlayStation Store. Code sofort per E-Mail – ohne Kreditkarte, sicher und diskret.",
-      "fr": "Crédit PlayStation Store CHF 50 – Rechargez votre PS5, PS4 ou PS3. Achetez les derniers jeux, Season Passes et DLC exclusifs. Code instantané par e-mail – sans carte de crédit, sécurisé.",
-      "it": "Credito PlayStation Store CHF 50 – Ricarica PS5, PS4 o PS3. Acquista gli ultimi giochi, Season Pass e DLC esclusivi. Codice immediato via e-mail – sicuro, senza carta di credito.",
-      "en": "PlayStation Store Credit CHF 50 – Top up your PS5, PS4 or PS3. Buy the latest blockbusters, indie hits, season passes and exclusive DLCs. Instant email code – no credit card needed, secure and private."
+      "de": "PlayStation Store Guthaben – Lade deine PS5, PS4 oder PS3 auf. Kaufe die neusten Blockbuster, Indie-Hits, Season Passes und exklusive DLCs direkt im PlayStation Store. Code sofort per E-Mail – ohne Kreditkarte, sicher und diskret.",
+      "fr": "Crédit PlayStation Store – Rechargez votre PS5, PS4 ou PS3. Achetez les derniers jeux, Season Passes et DLC exclusifs. Code instantané par e-mail – sans carte de crédit, sécurisé.",
+      "it": "Credito PlayStation Store – Ricarica PS5, PS4 o PS3. Acquista gli ultimi giochi, Season Pass e DLC esclusivi. Codice immediato via e-mail – sicuro, senza carta di credito.",
+      "en": "PlayStation Store Credit – Top up your PS5, PS4 or PS3. Buy the latest blockbusters, indie hits, season passes and exclusive DLCs. Instant email code – no credit card needed, secure and private."
     },
     "image": "/images/products/playstation-card.jpg",
     "inStock": true,
@@ -40,18 +40,18 @@
     "tags": ["gaming", "playstation", "console", "beliebt"]
   },
   {
-    "id": "xbox-50",
-    "name": "Xbox Live CHF 50",
+    "id": "xbox",
+    "name": "Xbox Live",
     "category": "gaming",
     "brand": "Xbox",
-    "price": 50.00,
+    "denominations": [50],
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Xbox Guthaben CHF 50 – Dein Zugang zur Xbox-Welt. Kaufe die neusten Blockbuster wie Call of Duty, EA Sports FC oder indische Highlights im Microsoft Store. Funktioniert auf Xbox Series X|S, Xbox One und Windows PC – ein Konto, überall spielbar. Greife auf Xbox Game Pass-Titel, DLCs, Filme und Apps zu. Code sofort per E-Mail – ohne Kreditkarte, sicher und bequem.",
-      "fr": "Crédit Xbox CHF 50 – Votre accès au monde Xbox. Achetez les derniers blockbusters comme Call of Duty, EA Sports FC ou des succès indépendants sur le Microsoft Store. Fonctionne sur Xbox Series X|S, Xbox One et PC Windows – un compte, jouez partout. Accédez aux titres Xbox Game Pass, DLC, films et applications. Code instantané par e-mail – sans carte de crédit, sûr et pratique.",
-      "it": "Credito Xbox CHF 50 – Il tuo accesso al mondo Xbox. Acquista gli ultimi blockbusters come Call of Duty, EA Sports FC o successi indie sul Microsoft Store. Funziona su Xbox Series X|S, Xbox One e PC Windows – un account, gioca ovunque. Accedi ai titoli Xbox Game Pass, DLC, film e app. Codice immediato via e-mail – senza carta di credito, sicuro e comodo.",
-      "en": "Xbox Credit CHF 50 – Your gateway to the Xbox world. Buy the latest blockbusters like Call of Duty, EA Sports FC or indie hits on the Microsoft Store. Works on Xbox Series X|S, Xbox One and Windows PC – one account, play everywhere. Access Xbox Game Pass titles, DLCs, movies and apps. Instant code via email – no credit card needed, safe and convenient."
+      "de": "Xbox Guthaben – Dein Zugang zur Xbox-Welt. Kaufe die neusten Blockbuster wie Call of Duty, EA Sports FC oder indische Highlights im Microsoft Store. Funktioniert auf Xbox Series X|S, Xbox One und Windows PC – ein Konto, überall spielbar. Code sofort per E-Mail – ohne Kreditkarte, sicher und bequem.",
+      "fr": "Crédit Xbox – Votre accès au monde Xbox. Achetez les derniers blockbusters sur le Microsoft Store. Fonctionne sur Xbox Series X|S, Xbox One et PC Windows. Code instantané par e-mail.",
+      "it": "Credito Xbox – Il tuo accesso al mondo Xbox. Acquista gli ultimi blockbusters sul Microsoft Store. Funziona su Xbox Series X|S, Xbox One e PC Windows. Codice immediato via e-mail.",
+      "en": "Xbox Credit – Your gateway to the Xbox world. Buy the latest blockbusters on the Microsoft Store. Works on Xbox Series X|S, Xbox One and Windows PC. Instant code via email."
     },
     "image": "/images/products/xbox-card.jpg",
     "inStock": true,
@@ -60,118 +60,18 @@
     "tags": ["gaming", "xbox", "console", "beliebt"]
   },
   {
-    "id": "netflix-30",
-    "name": "Netflix Geschenkkarte CHF 30",
-    "category": "streaming",
-    "brand": "Netflix",
-    "price": 30.00,
-    "margin": 0.06,
-    "currency": "CHF",
-    "description": {
-      "de": "Netflix Geschenkkarte CHF 30 – Streaming-Vergnügen für alle. Löse den Code ein und geniesse tausende Serien und Filme sofort auf jedem Gerät. Perfekt zum Verschenken oder für dich selbst – bestehende Mitglieder zahlen damit ihr Abo, Neukunden starten sofort durch. Code kommt in 60 Sekunden per E-Mail. Nur für Schweizer Netflix-Konten einlösbar (ab 18 Jahren).",
-      "fr": "Carte cadeau Netflix CHF 30 – Plaisir de streaming pour tous. Échangez le code et profitez instantanément de milliers de séries et films sur tous les appareils. Parfait pour offrir ou pour vous-même – les membres existants paient leur abonnement, les nouveaux clients commencent immédiatement. Code en 60 secondes par e-mail. Uniquement échangeable sur les comptes Netflix suisses (18+).",
-      "it": "Carta regalo Netflix CHF 30 – Piacere dello streaming per tutti. Riscatta il codice e goditi migliaia di serie e film istantaneamente su qualsiasi dispositivo. Perfetto per regalare o per te stesso – i membri esistenti pagano l'abbonamento, i nuovi clienti iniziano subito. Codice in 60 secondi via e-mail. Riscattabile solo su account Netflix svizzeri (18+).",
-      "en": "Netflix Gift Card CHF 30 – Streaming enjoyment for everyone. Redeem the code and instantly enjoy thousands of series and films on any device. Perfect for gifting or yourself – existing members use it to pay their subscription, new customers start right away. Code delivered in 60 seconds via email. Only redeemable on Swiss Netflix accounts (18+)."
-    },
-    "image": "/images/products/netflix-card.jpg",
-    "inStock": true,
-    "deliveryTime": "30-60 Sekunden",
-    "region": "CH",
-    "tags": ["streaming", "netflix", "geschenk"]
-  },
-  {
-    "id": "spotify-30",
-    "name": "Spotify Premium CHF 30",
-    "category": "streaming",
-    "brand": "Spotify",
-    "price": 30.00,
-    "margin": 0.06,
-    "currency": "CHF",
-    "description": {
-      "de": "Spotify Premium CHF 30 – Über 100 Millionen Songs ohne Werbung. Höre deine Lieblingsmusik offline, überspringe unbegrenzt und geniesse Premium-Soundqualität. Funktioniert für Neuabos und Bestandskunden – lade dein Abo auf oder starte frisch. Perfekt zum Verschenken oder für prepaid Budget-Kontrolle ohne Abo-Falle. Code sofort per E-Mail.",
-      "fr": "Crédit Spotify Premium CHF 30 – Plus de 100 millions de chansons sans publicité. Écoutez hors ligne, sautez sans limite et profitez de la qualité sonore Premium. Fonctionne pour les nouveaux et anciens abonnés. Parfait pour offrir ou pour un budget prépayé sans engagement. Code instantané par e-mail.",
-      "it": "Credito Spotify Premium CHF 30 – Oltre 100 milioni di brani senza pubblicità. Ascolta offline, salta illimitatamente e goditi la qualità audio Premium. Funziona per nuovi e vecchi abbonati. Perfetto per regalare o per il controllo budget prepagato. Codice immediato via e-mail.",
-      "en": "Spotify Premium CHF 30 – Over 100 million songs ad-free. Listen offline, skip unlimited and enjoy Premium audio quality. Works for new and existing subscribers. Perfect for gifting or prepaid budget control. Instant code via email."
-    },
-    "image": "/images/products/spotify-card.jpg",
-    "inStock": true,
-    "deliveryTime": "30-60 Sekunden",
-    "region": "CH",
-    "tags": ["streaming", "spotify", "musik"]
-  },
-  {
-    "id": "apple-50",
-    "name": "Apple App Store & iTunes CHF 50",
-    "category": "mobile",
-    "brand": "Apple",
-    "price": 50.00,
-    "margin": 0.07,
-    "currency": "CHF",
-    "description": {
-      "de": "Apple Guthaben CHF 50 – Eine Karte, Millionen Möglichkeiten. Lade Apps, Spiele, Musik, Filme, TV-Serien und Hörbücher im App Store und iTunes. Funktioniert auf iPhone, iPad, Mac und Apple TV – und für iCloud+ Speicher. In-App-Käufe und Abos inklusive. Perfekt zum Verschenken oder für prepaid Budget-Kontrolle. Code kommt in 60 Sekunden per E-Mail – sicher, ohne Kreditkarte.",
-      "fr": "Crédit Apple CHF 50 – Une carte, des millions de possibilités. Chargez des apps, jeux, musique, films, séries TV et livres audio sur l'App Store et iTunes. Fonctionne sur iPhone, iPad, Mac et Apple TV – et pour le stockage iCloud+. Achats in-app et abonnements inclus. Parfait pour offrir ou pour un budget prépayé. Code en 60 secondes par e-mail – sûr, sans carte de crédit.",
-      "it": "Credito Apple CHF 50 – Una carta, milioni di possibilità. Carica app, giochi, musica, film, serie TV e audiolibri sull'App Store e iTunes. Funziona su iPhone, iPad, Mac e Apple TV – e per lo spazio iCloud+. Acquisti in-app e abbonamenti inclusi. Perfetto per regalare o per il controllo budget prepagato. Codice in 60 secondi via e-mail – sicuro, senza carta di credito.",
-      "en": "Apple Credit CHF 50 – One card, millions of possibilities. Load apps, games, music, movies, TV shows and audiobooks on the App Store and iTunes. Works on iPhone, iPad, Mac and Apple TV – and for iCloud+ storage. In-app purchases and subscriptions included. Perfect for gifting or prepaid budget control. Code delivered in 60 seconds via email – secure, no credit card needed."
-    },
-    "image": "/images/products/apple-card.jpg",
-    "inStock": true,
-    "deliveryTime": "30-60 Sekunden",
-    "region": "CH",
-    "tags": ["mobile", "apple", "ios", "beliebt"]
-  },
-  {
-    "id": "google-play-50",
-    "name": "Google Play CHF 50",
-    "category": "mobile",
-    "brand": "Google",
-    "price": 50.00,
-    "margin": 0.07,
-    "currency": "CHF",
-    "description": {
-      "de": "Google Play Guthaben CHF 50 – Ein Code, unbegrenzter Spass. Zugriff auf Millionen von Apps, Spielen, Filmen, Musik, E-Books und Hörbüchern im Google Play Store. Funktioniert auf allen Android-Geräten, Chromebooks und im Webbrowser – deine Inhalte sind überall verfügbar. In-App-Käufe und Abo-Dienste inklusive. Code sofort per E-Mail – ohne Kreditkarte, volle Kostenkontrolle.",
-      "fr": "Crédit Google Play CHF 50 – Un code, plaisir illimité. Accédez à des millions d'apps, jeux, films, musique, ebooks et livres audio sur le Google Play Store. Fonctionne sur tous les appareils Android, Chromebooks et navigateurs web – vos contenus sont disponibles partout. Achats in-app et services d'abonnement inclus. Code instantané par e-mail – sans carte de crédit, contrôle total des coûts.",
-      "it": "Credito Google Play CHF 50 – Un codice, divertimento illimitato. Accesso a milioni di app, giochi, film, musica, ebook e audiolibri sul Google Play Store. Funziona su tutti i dispositivi Android, Chromebook e browser web – i tuoi contenuti sono disponibili ovunque. Acquisti in-app e servizi in abbonamento inclusi. Codice immediato via e-mail – senza carta di credito, controllo totale dei costi.",
-      "en": "Google Play Credit CHF 50 – One code, unlimited fun. Access millions of apps, games, movies, music, ebooks and audiobooks on the Google Play Store. Works on all Android devices, Chromebooks and web browsers – your content is available everywhere. In-app purchases and subscription services included. Instant code via email – no credit card, full cost control."
-    },
-    "image": "/images/products/google-play-card.jpg",
-    "inStock": true,
-    "deliveryTime": "30-60 Sekunden",
-    "region": "CH",
-    "tags": ["mobile", "android", "google"]
-  },
-  {
-    "id": "roblox-25",
-    "name": "Roblox CHF 25",
-    "category": "gaming",
-    "brand": "Roblox",
-    "price": 25.00,
-    "margin": 0.08,
-    "currency": "CHF",
-    "description": {
-      "de": "Roblox Guthaben CHF 25 – Tauche ein in Millionen von Spieler-Erlebnissen. Kaufe Robux für Skins, Accessoires und Spiel-Upgrades – oder aktiviere Roblox Premium für exklusive Vorteile. Das ideale Geschenk für junge Gamer zwischen 8 und 16 Jahren. Keine Kreditkarte nötig, volle Kostenkontrolle. Code kommt in 60 Sekunden per E-Mail.",
-      "fr": "Crédit Roblox CHF 25 – Plongez dans des millions d'expériences de jeu. Achetez des Robux pour des skins, accessoires et améliorations – ou activez Roblox Premium. Le cadeau idéal pour les jeunes joueurs de 8 à 16 ans. Sans carte de crédit, contrôle total des coûts. Code en 60 secondes par e-mail.",
-      "it": "Credito Roblox CHF 25 – Immergiti in milioni di esperienze di gioco. Acquista Robux per skin, accessori e upgrade – o attiva Roblox Premium. Il regalo ideale per giovani gamer dagl 8 ai 16 anni. Nessuna carta di credito, controllo totale dei costi. Codice in 60 secondi via e-mail.",
-      "en": "Roblox Credit CHF 25 – Dive into millions of player experiences. Buy Robux for skins, accessories and game upgrades – or activate Roblox Premium for exclusive perks. The perfect gift for young gamers aged 8-16. No credit card needed, full cost control. Code delivered in 60 seconds via email."
-    },
-    "image": "/images/products/roblox-card.jpg",
-    "inStock": true,
-    "deliveryTime": "30-60 Sekunden",
-    "region": "CH",
-    "tags": ["gaming", "roblox", "kinder"]
-  },
-  {
-    "id": "nintendo-50",
-    "name": "Nintendo eShop CHF 50",
+    "id": "nintendo",
+    "name": "Nintendo eShop",
     "category": "gaming",
     "brand": "Nintendo",
-    "price": 50.00,
+    "denominations": [50],
     "margin": 0.08,
     "currency": "CHF",
     "description": {
-      "de": "Nintendo eShop Guthaben CHF 50 – Entdecke die Welt von Nintendo. Kaufe die neusten Hits wie Zelda, Mario, Pokémon und Animal Crossing direkt im eShop. Zugriff auf exklusive Indie-Titel, Season Passes und DLC-Erweiterungen. Perfekt für Nintendo Switch, Switch Lite und Switch OLED – dein Guthaben, deine Spiele. Code sofort per E-Mail – ohne Kreditkarte, sicher und kinderleicht.",
-      "fr": "Crédit Nintendo eShop CHF 50 – Découvrez le monde Nintendo. Achetez les derniers hits comme Zelda, Mario, Pokémon et Animal Crossing directement sur l'eShop. Accédez à des titres indépendants exclusifs, Season Passes et extensions DLC. Parfait pour Nintendo Switch, Switch Lite et Switch OLED – votre crédit, vos jeux. Code instantané par e-mail – sans carte de crédit, sûr et facile.",
-      "it": "Credito Nintendo eShop CHF 50 – Scopri il mondo Nintendo. Acquista gli ultimi successi come Zelda, Mario, Pokémon e Animal Crossing direttamente sull'eShop. Accesso a titoli indie esclusivi, Season Pass ed espansioni DLC. Perfetto per Nintendo Switch, Switch Lite e Switch OLED – il tuo credito, i tuoi giochi. Codice immediato via e-mail – senza carta di credito, sicuro e facile.",
-      "en": "Nintendo eShop Credit CHF 50 – Discover the world of Nintendo. Buy the latest hits like Zelda, Mario, Pokémon and Animal Crossing directly in the eShop. Access exclusive indie titles, Season Passes and DLC expansions. Perfect for Nintendo Switch, Switch Lite and Switch OLED – your credit, your games. Instant code via email – no credit card needed, safe and easy."
+      "de": "Nintendo eShop Guthaben – Entdecke die Welt von Nintendo. Kaufe die neusten Hits wie Zelda, Mario, Pokémon und Animal Crossing direkt im eShop. Zugriff auf exklusive Indie-Titel, Season Passes und DLC-Erweiterungen. Code sofort per E-Mail – ohne Kreditkarte, sicher und kinderleicht.",
+      "fr": "Crédit Nintendo eShop – Découvrez le monde Nintendo. Achetez les derniers hits comme Zelda, Mario, Pokémon directement sur l'eShop. Code instantané par e-mail – sans carte de crédit, sûr et facile.",
+      "it": "Credito Nintendo eShop – Scopri il mondo Nintendo. Acquista gli ultimi successi come Zelda, Mario, Pokémon direttamente sull'eShop. Codice immediato via e-mail – senza carta di credito, sicuro e facile.",
+      "en": "Nintendo eShop Credit – Discover the world of Nintendo. Buy the latest hits like Zelda, Mario, Pokémon directly in the eShop. Instant code via email – no credit card needed, safe and easy."
     },
     "image": "/images/products/nintendo-card.jpg",
     "inStock": true,
@@ -180,18 +80,118 @@
     "tags": ["gaming", "nintendo", "switch", "beliebt"]
   },
   {
-    "id": "amazon-50",
-    "name": "Amazon.de Geschenkgutschein CHF 50",
+    "id": "netflix",
+    "name": "Netflix Geschenkkarte",
+    "category": "streaming",
+    "brand": "Netflix",
+    "denominations": [30],
+    "margin": 0.06,
+    "currency": "CHF",
+    "description": {
+      "de": "Netflix Geschenkkarte – Streaming-Vergnügen für alle. Löse den Code ein und geniesse tausende Serien und Filme sofort auf jedem Gerät. Perfekt zum Verschenken oder für dich selbst. Code kommt in 60 Sekunden per E-Mail. Nur für Schweizer Netflix-Konten einlösbar (ab 18 Jahren).",
+      "fr": "Carte cadeau Netflix – Plaisir de streaming pour tous. Échangez le code et profitez instantanément de milliers de séries et films. Parfait pour offrir. Code en 60 secondes par e-mail.",
+      "it": "Carta regalo Netflix – Piacere dello streaming per tutti. Riscatta il codice e goditi migliaia di serie e film. Perfetto per regalare. Codice in 60 secondi via e-mail.",
+      "en": "Netflix Gift Card – Streaming enjoyment for everyone. Redeem the code and instantly enjoy thousands of series and films. Perfect for gifting. Code delivered in 60 seconds via email."
+    },
+    "image": "/images/products/netflix-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["streaming", "netflix", "geschenk"]
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify Premium",
+    "category": "streaming",
+    "brand": "Spotify",
+    "denominations": [30],
+    "margin": 0.06,
+    "currency": "CHF",
+    "description": {
+      "de": "Spotify Premium – Über 100 Millionen Songs ohne Werbung. Höre deine Lieblingsmusik offline, überspringe unbegrenzt und geniesse Premium-Soundqualität. Perfekt zum Verschenken oder für prepaid Budget-Kontrolle ohne Abo-Falle. Code sofort per E-Mail.",
+      "fr": "Crédit Spotify Premium – Plus de 100 millions de chansons sans publicité. Écoutez hors ligne et profitez de la qualité sonore Premium. Code instantané par e-mail.",
+      "it": "Credito Spotify Premium – Oltre 100 milioni di brani senza pubblicità. Ascolta offline e goditi la qualità audio Premium. Codice immediato via e-mail.",
+      "en": "Spotify Premium – Over 100 million songs ad-free. Listen offline, skip unlimited and enjoy Premium audio quality. Perfect for gifting or prepaid budget control. Instant code via email."
+    },
+    "image": "/images/products/spotify-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["streaming", "spotify", "musik"]
+  },
+  {
+    "id": "apple",
+    "name": "Apple App Store & iTunes",
+    "category": "mobile",
+    "brand": "Apple",
+    "denominations": [50],
+    "margin": 0.07,
+    "currency": "CHF",
+    "description": {
+      "de": "Apple Guthaben – Eine Karte, Millionen Möglichkeiten. Lade Apps, Spiele, Musik, Filme, TV-Serien und Hörbücher im App Store und iTunes. Funktioniert auf iPhone, iPad, Mac und Apple TV. Code kommt in 60 Sekunden per E-Mail – sicher, ohne Kreditkarte.",
+      "fr": "Crédit Apple – Une carte, des millions de possibilités. Chargez des apps, jeux, musique, films sur l'App Store et iTunes. Code en 60 secondes par e-mail – sûr, sans carte de crédit.",
+      "it": "Credito Apple – Una carta, milioni di possibilità. Carica app, giochi, musica, film sull'App Store e iTunes. Codice in 60 secondi via e-mail – sicuro, senza carta di credito.",
+      "en": "Apple Credit – One card, millions of possibilities. Load apps, games, music, movies on the App Store and iTunes. Code delivered in 60 seconds via email – secure, no credit card needed."
+    },
+    "image": "/images/products/apple-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["mobile", "apple", "ios", "beliebt"]
+  },
+  {
+    "id": "google-play",
+    "name": "Google Play",
+    "category": "mobile",
+    "brand": "Google",
+    "denominations": [50],
+    "margin": 0.07,
+    "currency": "CHF",
+    "description": {
+      "de": "Google Play Guthaben – Ein Code, unbegrenzter Spass. Zugriff auf Millionen von Apps, Spielen, Filmen, Musik, E-Books und Hörbüchern im Google Play Store. Funktioniert auf allen Android-Geräten. Code sofort per E-Mail – ohne Kreditkarte, volle Kostenkontrolle.",
+      "fr": "Crédit Google Play – Un code, plaisir illimité. Accédez à des millions d'apps, jeux, films, musique sur le Google Play Store. Code instantané par e-mail – sans carte de crédit.",
+      "it": "Credito Google Play – Un codice, divertimento illimitato. Accesso a milioni di app, giochi, film, musica sul Google Play Store. Codice immediato via e-mail – senza carta di credito.",
+      "en": "Google Play Credit – One code, unlimited fun. Access millions of apps, games, movies, music on the Google Play Store. Instant code via email – no credit card, full cost control."
+    },
+    "image": "/images/products/google-play-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["mobile", "android", "google"]
+  },
+  {
+    "id": "roblox",
+    "name": "Roblox",
+    "category": "gaming",
+    "brand": "Roblox",
+    "denominations": [25],
+    "margin": 0.08,
+    "currency": "CHF",
+    "description": {
+      "de": "Roblox Guthaben – Tauche ein in Millionen von Spieler-Erlebnissen. Kaufe Robux für Skins, Accessoires und Spiel-Upgrades. Das ideale Geschenk für junge Gamer zwischen 8 und 16 Jahren. Keine Kreditkarte nötig. Code kommt in 60 Sekunden per E-Mail.",
+      "fr": "Crédit Roblox – Plongez dans des millions d'expériences de jeu. Achetez des Robux pour des skins et accessoires. Le cadeau idéal pour les jeunes joueurs. Code en 60 secondes par e-mail.",
+      "it": "Credito Roblox – Immergiti in milioni di esperienze di gioco. Acquista Robux per skin e accessori. Il regalo ideale per giovani gamer. Codice in 60 secondi via e-mail.",
+      "en": "Roblox Credit – Dive into millions of player experiences. Buy Robux for skins and accessories. The perfect gift for young gamers. Code delivered in 60 seconds via email."
+    },
+    "image": "/images/products/roblox-card.jpg",
+    "inStock": true,
+    "deliveryTime": "30-60 Sekunden",
+    "region": "CH",
+    "tags": ["gaming", "roblox", "kinder"]
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon.de Geschenkgutschein",
     "category": "shopping",
     "brand": "Amazon",
-    "price": 50.00,
+    "denominations": [50],
     "margin": 0.05,
     "currency": "CHF",
     "description": {
-      "de": "Amazon.de Geschenkgutschein CHF 50 – Das perfekte Geschenk für jeden Anlass. Einlösbar für Millionen von Produkten: Elektronik, Bücher, Kleidung, Haushalt, Spielzeug und vieles mehr. Schnelle Lieferung aus Deutschland, auch in die Schweiz. Ideal zum Geburtstag, zu Weihnachten oder einfach als Dankeschön. Code sofort per E-Mail – flexibel, praktisch, immer willkommen.",
-      "fr": "Bon cadeau Amazon.de CHF 50 – Le cadeau parfait pour toutes les occasions. Échangeable contre des millions de produits : électronique, livres, vêtements, maison, jouets et plus encore. Livraison rapide depuis l'Allemagne, également en Suisse. Idéal pour les anniversaires, Noël ou simplement pour dire merci. Code instantané par e-mail – flexible, pratique, toujours apprécié.",
-      "it": "Buono regalo Amazon.de CHF 50 – Il regalo perfetto per ogni occasione. Riscattabile per milioni di prodotti: elettronica, libri, abbigliamento, casa, giocattoli e molto altro. Consegna rapida dalla Germania, anche in Svizzera. Ideale per compleanni, Natale o semplicemente per dire grazie. Codice immediato via e-mail – flessibile, pratico, sempre gradito.",
-      "en": "Amazon.de Gift Card CHF 50 – The perfect gift for any occasion. Redeemable for millions of products: electronics, books, clothing, household, toys and much more. Fast delivery from Germany, also to Switzerland. Ideal for birthdays, Christmas or just as a thank you. Instant code via email – flexible, practical, always welcome."
+      "de": "Amazon.de Geschenkgutschein – Das perfekte Geschenk für jeden Anlass. Einlösbar für Millionen von Produkten: Elektronik, Bücher, Kleidung, Haushalt und vieles mehr. Schnelle Lieferung aus Deutschland, auch in die Schweiz. Code sofort per E-Mail.",
+      "fr": "Bon cadeau Amazon.de – Le cadeau parfait pour toutes les occasions. Échangeable contre des millions de produits. Code instantané par e-mail – flexible, pratique, toujours apprécié.",
+      "it": "Buono regalo Amazon.de – Il regalo perfetto per ogni occasione. Riscattabile per milioni di prodotti. Codice immediato via e-mail – flessibile, pratico, sempre gradito.",
+      "en": "Amazon.de Gift Card – The perfect gift for any occasion. Redeemable for millions of products. Instant code via email – flexible, practical, always welcome."
     },
     "image": "/images/products/amazon-card.jpg",
     "inStock": true,
