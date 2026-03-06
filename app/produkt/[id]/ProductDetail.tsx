@@ -6,18 +6,18 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { useSiteConfig } from '@/lib/config';
 import { getDomainSpecificContent } from '@/lib/i18n';
 
-// Brand images - using reliable CDN sources
+// Brand images - using local brand logos
 const brandImages: Record<string, string> = {
-  'Steam': 'https://cdn.simpleicons.org/steam/000000',
-  'PlayStation': 'https://cdn.simpleicons.org/playstation/003791',
-  'Xbox': 'https://cdn.simpleicons.org/xbox/107C10',
-  'Nintendo': 'https://cdn.simpleicons.org/nintendo/E60012',
-  'Netflix': 'https://cdn.simpleicons.org/netflix/E50914',
-  'Spotify': 'https://cdn.simpleicons.org/spotify/1DB954',
-  'Apple': 'https://cdn.simpleicons.org/apple/000000',
-  'Google': 'https://cdn.simpleicons.org/google/4285F4',
-  'Roblox': 'https://cdn.simpleicons.org/roblox/000000',
-  'Amazon': 'https://cdn.simpleicons.org/amazon/FF9900',
+  'Steam': '/brands/steam.png',
+  'PlayStation': '/brands/playstation.png',
+  'Xbox': '/brands/xbox.png',
+  'Nintendo': '/brands/nintendo.png',
+  'Netflix': '/brands/netflix.png',
+  'Spotify': '/brands/spotify.png',
+  'Apple': '/brands/apple.png',
+  'Google': '/brands/google.png',
+  'Roblox': '/brands/roblox.jpg',
+  'Amazon': '/brands/amazon.png',
 };
 
 // Extended product info with translations
