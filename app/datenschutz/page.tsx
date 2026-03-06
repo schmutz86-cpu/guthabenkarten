@@ -9,7 +9,7 @@ export default function DatenschutzPage() {
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
             <h2 className="text-xl font-semibold text-white mb-4">1. Übersicht</h2>
             <p className="mb-3">Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung informiert Sie über die Erhebung und Verarbeitung Ihrer Daten beim Besuch unserer Website und bei der Nutzung unserer Dienste.</p>
-            <p><strong>Verantwortlicher:</strong> Philipp Schmutz, Guthabenkarten.ch, 5303 Würenlos, Schweiz, E-Mail: info@guthabenkarten.ch</p>
+            <p><strong>Verantwortlicher:</strong> [Wird nach Registrierung eingetragen], Guthabenkarten.ch, E-Mail: info@guthabenkarten.ch</p>
           </section>
 
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">

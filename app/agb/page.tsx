@@ -30,7 +30,7 @@ export default function AGBPage() {
             <h2 className="text-xl font-semibold text-white mb-4">§5 Impressum</h2>
             <p className="mb-2"><strong>Anbieter:</strong> Guthabenkarten.ch</p>
             <p className="mb-2"><strong>E-Mail:</strong> info@guthabenkarten.ch</p>
-            <p className="mb-2"><strong>Verantwortlich:</strong> Philipp Schmutz, Würenlos, Schweiz</p>
+            <p className="mb-2"><strong>Verantwortlich:</strong> [Wird nach Registrierung eingetragen]</p>
           </section>
         </div>
       </div>

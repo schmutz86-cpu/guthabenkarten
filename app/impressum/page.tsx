@@ -9,14 +9,14 @@ export default function ImpressumPage() {
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
             <h2 className="text-xl font-semibold text-white mb-4">Anbieter</h2>
             <p className="mb-2"><strong>Guthabenkarten.ch</strong></p>
-            <p className="mb-2">Philipp Schmutz</p>
-            <p>5303 Würenlos, Schweiz</p>
+            <p className="mb-2">[Firmenname wird nach Registrierung eingetragen]</p>
+            <p>[Adresse wird nach Registrierung eingetragen]</p>
           </section>
 
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
             <h2 className="text-xl font-semibold text-white mb-4">Kontakt</h2>
             <p className="mb-2"><strong>E-Mail:</strong> info@guthabenkarten.ch</p>
-            <p><strong>Verantwortlich:</strong> Philipp Schmutz</p>
+            <p><strong>Verantwortlich:</strong> [Wird nach Registrierung eingetragen]</p>
           </section>
 
           <section className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
