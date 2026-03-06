@@ -18,6 +18,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Guthabenkarten.ch - Gaming Guthabenkarten | Sofortlieferung",
   description: "Gaming Guthabenkarten für Steam, PlayStation, Xbox, Nintendo und mehr. Sofortlieferung per E-Mail. CHF Preise, 100% sicher.",
+  keywords: ["Steam Guthaben", "PlayStation Store", "Xbox Live", "Nintendo eShop", "Netflix Geschenkkarte", "Spotify Premium", "Gaming Guthabenkarten Schweiz", "TWINT"],
+  authors: [{ name: "Guthabenkarten.ch" }],
+  openGraph: {
+    title: "Guthabenkarten.ch - Gaming Guthabenkarten | Sofortlieferung",
+    description: "Gaming Guthabenkarten für Steam, PlayStation, Xbox, Nintendo und mehr. Sofortlieferung per E-Mail. CHF Preise, 100% sicher.",
+    url: "https://guthabenkarten.ch",
+    siteName: "Guthabenkarten.ch",
+    locale: "de_CH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guthabenkarten.ch - Gaming Guthabenkarten",
+    description: "Gaming Guthabenkarten für Steam, PlayStation, Xbox, Nintendo und mehr. Sofortlieferung per E-Mail.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://guthabenkarten.ch",
+  },
 };
 
 export default function RootLayout({
